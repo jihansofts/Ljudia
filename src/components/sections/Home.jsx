@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const VIDEOS = [
   {
@@ -19,7 +19,6 @@ export default function HomeSection() {
     VIDEOS.findIndex((video) => video.id === activeVideoId),
     0,
   );
-  const activeVideo = VIDEOS[activeVideoIndex];
   const nextVideo = VIDEOS[(activeVideoIndex + 1) % VIDEOS.length];
   const showNextVideo = () => {
     setActiveVideoId((currentVideoId) => {
@@ -31,21 +30,45 @@ export default function HomeSection() {
       return VIDEOS[(currentVideoIndex + 1) % VIDEOS.length].id;
     });
   };
+  const ensurePlayback = (event) => {
+    const playPromise = event.currentTarget.play();
+
+    if (playPromise) {
+      playPromise.catch(() => {});
+    }
+  };
+
+  useEffect(() => {
+    const intervalId = window.setInterval(showNextVideo, 8000);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-stone-950">
-      <video
-        key={activeVideo.src}
-        className="absolute inset-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        playsInline
-        preload="auto"
-        onEnded={showNextVideo}
-      >
-        <source src={activeVideo.src} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {VIDEOS.map((video) => {
+        const isActive = video.id === activeVideoId;
+
+        return (
+          <video
+            key={video.id}
+            aria-hidden={!isActive}
+            className={[
+              "absolute inset-0 h-full w-full object-cover transition-opacity duration-700",
+              isActive ? "opacity-100" : "opacity-0",
+            ].join(" ")}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            onLoadedData={ensurePlayback}
+          >
+            <source src={video.src} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        );
+      })}
 
       <div className="absolute inset-0 bg-black/45" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(251,191,36,0.28),transparent_32%),linear-gradient(180deg,rgba(0,0,0,0.18)_0%,rgba(0,0,0,0.58)_100%)]" />
