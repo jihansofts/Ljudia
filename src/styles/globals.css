@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --site-max-width: 1440px;
+  --site-desktop-width: 80%;
+  --site-mobile-gutter: 1rem;
 }
 
 @theme inline {
@@ -26,6 +29,12 @@ body {
   margin: 0;
 }
 
+.site-shell {
+  width: min(var(--site-max-width), var(--site-desktop-width));
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
 .hero-demo {
   min-height: 70vh;
   padding: 6rem 2rem 3rem;
@@ -35,4 +44,13 @@ body {
 .spacer {
   height: 120vh;
   background: #fff;
+}
+
+@media (max-width: 1023px) {
+  .site-shell {
+    width: min(
+      var(--site-max-width),
+      calc(100% - (var(--site-mobile-gutter) * 2))
+    );
+  }
 }

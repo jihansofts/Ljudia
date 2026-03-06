@@ -22,14 +22,14 @@ export default function Navbar() {
 
   return (
     <header
-      className={[
-        "fixed inset-x-0 top-0 z-50 text-white transition-colors backdrop-blur",
-        isScrolled ? "bg-black/90" : "bg-black/70",
-      ].join(" ")}
+      className="fixed inset-x-0 top-0 z-50 text-white"
     >
       <nav
         role="navigation"
-        className="mx-auto max-w-[1440px] px-10 text-[11px] font-semibold uppercase tracking-[0.16em]"
+        className={[
+          "site-shell overflow-hidden px-10 text-[11px] font-semibold uppercase tracking-[0.16em] transition-colors backdrop-blur",
+          isScrolled ? "bg-black/90" : "bg-black/70",
+        ].join(" ")}
       >
         {/* Top header bar: Contact / A A / العربية */}
         <div
@@ -99,4 +99,3 @@ export default function Navbar() {
     </header>
   );
 }
-
