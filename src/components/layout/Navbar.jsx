@@ -21,21 +21,19 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
-      className="fixed inset-x-0 top-0 z-50 text-white"
-    >
+    <header className="fixed inset-x-0 top-0 z-50 text-white">
       <nav
         role="navigation"
         className={[
-          "site-shell overflow-hidden px-10 text-[11px] font-semibold uppercase tracking-[0.16em] transition-colors backdrop-blur",
-          isScrolled ? "bg-black/90" : "bg-black/70",
+          "site-shell overflow-hidden text-[11px] font-semibold uppercase tracking-[0.16em] transition-colors backdrop-blur",
+          isScrolled ? "bg-amber-900" : "bg-black/50",
         ].join(" ")}
       >
         {/* Top header bar: Contact / A A / العربية */}
         <div
           className={[
-            "overflow-hidden transition-all duration-200",
-            isScrolled ? "max-h-0 opacity-0" : "max-h-[30px] opacity-100",
+            "overflow-hidden transition-all duration-200 color: bg-amber-950",
+            isScrolled ? "max-h-0 opacity-0" : "max-h-[30px] opacity-100 p-2",
           ].join(" ")}
         >
           <div className="flex h-[30px] items-center justify-end">
@@ -63,7 +61,7 @@ export default function Navbar() {
         </div>
 
         {/* Main nav row */}
-        <div className="flex h-[77px] items-center gap-10">
+        <div className="grid h-[77px] grid-cols-[auto_minmax(0,1fr)] items-center gap-10 p-2">
           {/* Left: logo/brand */}
           <div className="flex items-center gap-3">
             <span className="flex h-8 w-8 items-center justify-center rounded-full border border-amber-400 text-base font-bold text-amber-300">
@@ -77,8 +75,8 @@ export default function Navbar() {
           </div>
 
           {/* Center: main nav items */}
-          <div className="flex flex-1 items-center justify-center">
-            <ul className="flex items-center gap-9 text-[10px]">
+          <div className="flex min-w-0 items-center justify-end">
+            <ul className="flex items-center gap-7 text-[10px] xl:gap-8">
               {NAV_ITEMS.map((item) => (
                 <li key={item}>
                   <Link
@@ -91,9 +89,6 @@ export default function Navbar() {
               ))}
             </ul>
           </div>
-
-          {/* Right: spacer to balance layout */}
-          <div className="w-[72px]" />
         </div>
       </nav>
     </header>
