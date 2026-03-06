@@ -25,7 +25,7 @@ export default function Navbar() {
       <nav
         role="navigation"
         className={[
-          "site-shell overflow-hidden text-[11px] font-semibold uppercase tracking-[0.16em] transition-colors backdrop-blur",
+          "site-shell overflow-hidden text-[12px] font-semibold uppercase tracking-[0.16em] transition-colors backdrop-blur",
           isScrolled ? "bg-amber-900" : "bg-black/50",
         ].join(" ")}
       >
@@ -33,11 +33,11 @@ export default function Navbar() {
         <div
           className={[
             "overflow-hidden bg-amber-950 transition-all duration-200",
-            isScrolled ? "max-h-0 opacity-0" : "max-h-\[30px\] opacity-100",
+            isScrolled ? "max-h-0 opacity-0" : "max-h-[38px] opacity-100",
           ].join(" ")}
         >
-          <div className="flex h-\[30px\] items-center justify-end text-center p-2">
-            <ul className="flex items-center justify-center gap-6 text-[10px]">
+          <div className="flex h-[38px] items-center justify-center px-5 text-center">
+            <ul className="flex items-center justify-center gap-7 text-[11px]">
               <li>
                 <Link
                   href="#"
@@ -61,20 +61,20 @@ export default function Navbar() {
         </div>
 
         {/* Main nav row */}
-        <div className="grid h-\[77px\] grid-cols-[auto_minmax(0,1fr)] items-center gap-10 p-2">
+        <div className="grid h-[88px] grid-cols-[auto_minmax(0,1fr)] items-center gap-12 px-5">
           {/* Left: logo/brand */}
-          <div className="flex items-center gap-3">
-            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-amber-400 text-base font-bold text-amber-300">
+          <div className="flex items-center gap-4">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-amber-400 text-lg font-bold text-amber-300">
               L
             </span>
             <span className="flex flex-col leading-tight">
-              <span className="text-[10px] tracking-[0.18em]">Ljudia</span>
+              <span className="text-[11px] tracking-[0.18em]">Ljudia</span>
             </span>
           </div>
 
           {/* Center: main nav items */}
           <div className="flex min-w-0 items-center justify-end">
-            <ul className="flex items-center gap-7 text-[10px] xl:gap-8">
+            <ul className="flex items-center gap-8 text-[11px] xl:gap-10">
               {NAV_ITEMS.map((item) => (
                 <li key={item}>
                   <Link
