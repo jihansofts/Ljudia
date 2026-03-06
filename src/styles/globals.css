@@ -37,17 +37,6 @@ body {
   box-sizing: border-box;
 }
 
-.hero-demo {
-  min-height: 70vh;
-  padding: 6rem 2rem 3rem;
-  background: linear-gradient(180deg, #f2eee9 0%, #ffffff 100%);
-}
-
-.spacer {
-  height: 120vh;
-  background: #fff;
-}
-
 @media (min-width: 1280px) {
   .site-shell {
     width: min(var(--site-max-width), var(--site-desktop-width));

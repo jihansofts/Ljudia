@@ -32,12 +32,12 @@ export default function Navbar() {
         {/* Top header bar: Contact / A A / العربية */}
         <div
           className={[
-            "overflow-hidden transition-all duration-200 color: bg-amber-950",
-            isScrolled ? "max-h-0 opacity-0" : "max-h-[30px] opacity-100 p-2",
+            "overflow-hidden bg-amber-950 transition-all duration-200",
+            isScrolled ? "max-h-0 opacity-0" : "max-h-\[30px\] opacity-100",
           ].join(" ")}
         >
-          <div className="flex h-[30px] items-center justify-end">
-            <ul className="flex items-center gap-6 text-[10px]">
+          <div className="flex h-\[30px\] items-center justify-end text-center p-2">
+            <ul className="flex items-center justify-center gap-6 text-[10px]">
               <li>
                 <Link
                   href="#"
@@ -61,16 +61,14 @@ export default function Navbar() {
         </div>
 
         {/* Main nav row */}
-        <div className="grid h-[77px] grid-cols-[auto_minmax(0,1fr)] items-center gap-10 p-2">
+        <div className="grid h-\[77px\] grid-cols-[auto_minmax(0,1fr)] items-center gap-10 p-2">
           {/* Left: logo/brand */}
           <div className="flex items-center gap-3">
             <span className="flex h-8 w-8 items-center justify-center rounded-full border border-amber-400 text-base font-bold text-amber-300">
-              M
+              L
             </span>
             <span className="flex flex-col leading-tight">
-              <span className="text-[10px] tracking-[0.18em]">
-                Majid Al Futtaim
-              </span>
+              <span className="text-[10px] tracking-[0.18em]">Ljudia</span>
             </span>
           </div>
 
