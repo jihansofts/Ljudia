@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+}
+
+.skip-link:focus {
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  color: #fff;
+  padding: 0.75rem 1rem;
+}
+
+.maf-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: transform 0.25s ease;
+}
+
+.maf-utility-bar {
+  height: 34px;
+  background: #2a1f16;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 2rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s ease, max-height 0.2s ease;
+  max-height: 34px;
+  overflow: hidden;
+}
+
+.maf-utility-inner {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.maf-utility-inner a,
+.maf-search {
+  color: inherit;
+  text-decoration: none;
+}
+
+.maf-main-nav {
+  height: 76px;
+  background: rgba(20, 12, 6, 0.95);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0 2.25rem;
+  transition: height 0.2s ease, background-color 0.2s ease;
+}
+
+.maf-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #d1a65b;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.maf-logo-mark {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.maf-logo-text {
+  color: #fff;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+}
+
+.maf-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin: 0;
+  padding: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.09em;
+}
+
+.maf-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.maf-header.is-scrolled .maf-utility-bar {
+  opacity: 0;
+  max-height: 0;
+}
+
+.maf-header.is-scrolled .maf-main-nav {
+  height: 68px;
+  background: #2a1f16;
+}
+
+.page-content {
+  padding-top: 110px;
+}
+
+.hero-demo {
+  min-height: 70vh;
+  padding: 6rem 2rem 3rem;
+  background: linear-gradient(180deg, #f2eee9 0%, #ffffff 100%);
+}
+
+.spacer {
+  height: 120vh;
+  background: #fff;
+}
+
+@media (max-width: 1100px) {
+  .maf-links {
+    display: none;
+  }
+
+  .maf-main-nav {
+    justify-content: center;
+  }
+}
