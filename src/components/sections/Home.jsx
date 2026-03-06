@@ -21,6 +21,16 @@ export default function HomeSection() {
   );
   const activeVideo = VIDEOS[activeVideoIndex];
   const nextVideo = VIDEOS[(activeVideoIndex + 1) % VIDEOS.length];
+  const showNextVideo = () => {
+    setActiveVideoId((currentVideoId) => {
+      const currentVideoIndex = Math.max(
+        VIDEOS.findIndex((video) => video.id === currentVideoId),
+        0,
+      );
+
+      return VIDEOS[(currentVideoIndex + 1) % VIDEOS.length].id;
+    });
+  };
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-stone-950">
@@ -29,9 +39,9 @@ export default function HomeSection() {
         className="absolute inset-0 h-full w-full object-cover"
         autoPlay
         muted
-        loop
         playsInline
-        preload="metadata"
+        preload="auto"
+        onEnded={showNextVideo}
       >
         <source src={activeVideo.src} type="video/mp4" />
         Your browser does not support the video tag.
@@ -48,7 +58,7 @@ export default function HomeSection() {
 
           <button
             type="button"
-            onClick={() => setActiveVideoId(nextVideo.id)}
+            onClick={showNextVideo}
             aria-label={`Switch to ${nextVideo.title}`}
             className="rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-stone-950 transition-colors hover:bg-amber-300"
           >

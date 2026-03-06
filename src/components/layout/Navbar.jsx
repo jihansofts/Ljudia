@@ -36,7 +36,7 @@ export default function Navbar() {
             isScrolled ? "max-h-0 opacity-0" : "max-h-[38px] opacity-100",
           ].join(" ")}
         >
-          <div className="flex h-[38px] items-center justify-center px-5 text-center">
+          <div className="flex h-[38px] items-center justify-end px-5 text-center">
             <ul className="flex items-center justify-center gap-7 text-[11px]">
               <li>
                 <Link
