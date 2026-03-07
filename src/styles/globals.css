@@ -3,9 +3,6 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --site-max-width: 1440px;
-  --site-desktop-width: 80%;
-  --site-mobile-gutter: 1rem;
 }
 
 @theme inline {
@@ -26,19 +23,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.site-shell {
-  width: min(
-    var(--site-max-width),
-    calc(100% - (var(--site-mobile-gutter) * 2))
-  );
-  margin-inline: auto;
-  box-sizing: border-box;
-}
-
-@media (min-width: 1280px) {
-  .site-shell {
-    width: min(var(--site-max-width), var(--site-desktop-width));
-  }
 }

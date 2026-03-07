@@ -11,9 +11,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Navbar />
       <main id="main-content" className={isHomePage ? "" : "pt-[126px]"}>
-        <div className="site-shell">
-          <Component {...pageProps} />
-        </div>
+        <Component {...pageProps} />
       </main>
       <Footer />
     </>

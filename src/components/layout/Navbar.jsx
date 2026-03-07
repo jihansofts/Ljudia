@@ -25,7 +25,7 @@ export default function Navbar() {
       <nav
         role="navigation"
         className={[
-          "site-shell overflow-hidden text-[12px] font-semibold uppercase tracking-[0.16em] transition-colors backdrop-blur",
+          "overflow-hidden text-[12px] font-semibold uppercase tracking-[0.16em] transition-colors backdrop-blur",
           isScrolled ? "bg-amber-900" : "bg-black/50",
         ].join(" ")}
       >
