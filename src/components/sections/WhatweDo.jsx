@@ -10,41 +10,41 @@ const SLIDES = [
     id: "vision",
     image: "/images/office-images/office-1.jpg",
     imageAlt: "Team members discussing work around a meeting table.",
-    eyebrow: "WHAT WE DO",
-    title: "We build experiences that feel ambitious and human.",
+    eyebrow: "HIRING SOLUTIONS",
+    title: "We help companies hire the right people faster.",
     description:
-      "From concept to execution, we shape spaces, campaigns, and digital touchpoints that keep brands memorable and people engaged.",
-    buttonLabel: "Explore Our Work",
+      "From role scoping to shortlisting, we streamline recruitment so growing teams can fill critical positions with clarity and confidence.",
+    buttonLabel: "Hire With Us",
   },
   {
     id: "talent",
     image: "/images/office-images/office-2.jpg",
     imageAlt: "Colleagues working together in a bright office.",
-    eyebrow: "HOW WE HELP",
-    title: "Creative strategy, sharper storytelling, stronger delivery.",
+    eyebrow: "TALENT SEARCH",
+    title: "Recruitment support built for business growth.",
     description:
-      "We combine design direction, production thinking, and audience insight to turn broad ideas into clear, high-impact outcomes.",
-    buttonLabel: "See Services",
+      "Our team sources executive, technical, and operational talent to reduce time-to-hire without lowering the quality of your candidate pipeline.",
+    buttonLabel: "Find Talent",
   },
   {
     id: "future",
     image: "/images/office-images/office-3.jpg",
     imageAlt: "Modern office desks arranged in an open workspace.",
-    eyebrow: "WHY IT WORKS",
-    title: "Every frame is designed to move people toward action.",
+    eyebrow: "EMPLOYER PARTNERSHIP",
+    title: "A hiring partner focused on fit, performance, and retention.",
     description:
-      "The result is a section that looks cinematic, reads clearly, and gives your visitors a direct path into the next step.",
-    buttonLabel: "Start The Journey",
+      "We align every search with your culture, team structure, and long-term hiring goals so candidates fit beyond the resume.",
+    buttonLabel: "Talk To Recruiters",
   },
   {
     id: "spaces",
     image: "/images/office-images/office-4.jpg",
     imageAlt: "A polished office interior with a welcoming collaborative feel.",
-    eyebrow: "WHERE IT LANDS",
-    title: "Office environments that look refined and feel purposeful.",
+    eyebrow: "WORKFORCE GROWTH",
+    title: "Scale your team with dependable recruitment support.",
     description:
-      "Using the office image set keeps the section visually consistent while still giving the slider enough range to feel alive across each transition.",
-    buttonLabel: "View The Details",
+      "Whether you need one key hire or an ongoing talent pipeline, we bring market insight, screening rigor, and consistent delivery to every search.",
+    buttonLabel: "Build Your Team",
   },
 ];
 
@@ -116,7 +116,7 @@ export default function WhatweDo() {
                   {slide.eyebrow}
                 </p>
 
-                <h2 className="max-w-2xl text-xl font-semibold leading-tight text-balance sm:text-5xl lg:text-7xl">
+                <h2 className="max-w-2xl text-xl font-semibold leading-tight text-balance sm:text-4xl lg:text-5xl">
                   {slide.title}
                 </h2>
 
