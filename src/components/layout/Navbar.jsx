@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -65,13 +66,15 @@ export default function Navbar() {
         {/* Main nav row */}
         <div className="grid h-[70px] grid-cols-[auto_minmax(0,1fr)] items-center gap-12 px-5">
           {/* Left: logo/brand */}
-          <div className="flex items-center gap-4">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--navbar-accent-strong)] text-lg font-bold text-[var(--navbar-accent)]">
-              L
-            </span>
-            <span className="flex flex-col leading-tight">
-              <span className="text-[11px] tracking-[0.18em]">Ljudia</span>
-            </span>
+          <div className="flex items-center">
+            <Image
+              src="/Logo-light.png"
+              alt="Ljudia"
+              width={1500}
+              height={1394}
+              priority
+              className="h-12 w-auto object-contain"
+            />
           </div>
 
           {/* Center: main nav items */}

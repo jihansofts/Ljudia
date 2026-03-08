@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }) {
       <main id="main-content" className={isHomePage ? "" : "pt-[126px]"}>
         <Component {...pageProps} />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
