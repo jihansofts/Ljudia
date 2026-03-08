@@ -4,12 +4,12 @@ const VIDEOS = [
   {
     id: "laugh",
     title: "Laugh Until It Hurts",
-    src: "/Laugh-until-it-hurts.mp4",
+    src: "/videos/Laugh-until-it-hurts.mp4",
   },
   {
     id: "soar",
     title: "Soar To New Heights",
-    src: "/Soar-to-new-heights.mp4",
+    src: "/videos/Soar-to-new-heights.mp4",
   },
 ];
 

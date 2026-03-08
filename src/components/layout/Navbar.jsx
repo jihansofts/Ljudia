@@ -68,7 +68,7 @@ export default function Navbar() {
           {/* Left: logo/brand */}
           <div className="flex items-center">
             <Image
-              src="/Logo-light.png"
+              src="/images/Logo-light.png"
               alt="Ljudia"
               width={1500}
               height={1394}

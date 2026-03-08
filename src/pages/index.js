@@ -1,12 +1,13 @@
 import HomeSection from "@/components/sections/Home";
 import DualDivSection from "@/components/sections/DualDivSection";
+import WhatweDo from "@/components/sections/WhatweDo";
 
 export default function Home() {
   return (
     <>
       <HomeSection />
       <DualDivSection
-        image="/homepage_vision_driven.jpg"
+        image="/images/homepage_vision_driven.jpg"
         smallTitle="WHO WE ARE"
         title={
           <>
@@ -18,8 +19,9 @@ export default function Home() {
         description="In our quest to create ‘great moments for everyone, everyday’, Majid Al Futtaim has enabled happiness in the lives of people from around the world. Find out more about who we are.Next.js provides powerful tools to build scalable applications quickly."
         buttonName="Explore the Journey"
       />
+      <WhatweDo />
       <DualDivSection
-        image="/homepage_peoples_and_careers.avif"
+        image="/images/homepage_peoples_and_careers.avif"
         smallTitle="People & Careers"
         title={
           <>
@@ -33,7 +35,7 @@ export default function Home() {
       />
 
       <DualDivSection
-        image="/homepage_investor_relations.avif"
+        image="/images/homepage_investor_relations.avif"
         smallTitle="INVESTOR RELATIONS"
         title={
           <>
