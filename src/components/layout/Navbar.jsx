@@ -26,13 +26,15 @@ export default function Navbar() {
         role="navigation"
         className={[
           "overflow-hidden text-[12px] font-semibold uppercase tracking-[0.16em] transition-colors backdrop-blur",
-          isScrolled ? "bg-amber-900" : "bg-black/50",
+          isScrolled
+            ? "bg-[var(--navbar-surface)]"
+            : "bg-[var(--navbar-overlay)]",
         ].join(" ")}
       >
-        {/* Top header bar: Contact / A A / العربية */}
+        {/* Top header bar*/}
         <div
           className={[
-            "overflow-hidden bg-amber-950 transition-all duration-200",
+            "overflow-hidden bg-[var(--navbar-surface)] transition-all duration-200",
             isScrolled ? "max-h-0 opacity-0" : "max-h-[38px] opacity-100",
           ].join(" ")}
         >
@@ -41,18 +43,18 @@ export default function Navbar() {
               <li>
                 <Link
                   href="#"
-                  className="tracking-[0.18em] hover:text-amber-300"
+                  className="tracking-[0.18em] hover:text-[var(--navbar-accent)]"
                 >
                   Contact Us
                 </Link>
               </li>
               <li>
-                <button className="tracking-[0.18em] hover:text-amber-300">
+                <button className="tracking-[0.18em] hover:text-[var(--navbar-accent)]">
                   A A
                 </button>
               </li>
               <li>
-                <button className="tracking-[0.18em] hover:text-amber-300">
+                <button className="tracking-[0.18em] hover:text-[var(--navbar-accent)]">
                   العربية
                 </button>
               </li>
@@ -61,10 +63,10 @@ export default function Navbar() {
         </div>
 
         {/* Main nav row */}
-        <div className="grid h-[88px] grid-cols-[auto_minmax(0,1fr)] items-center gap-12 px-5">
+        <div className="grid h-[70px] grid-cols-[auto_minmax(0,1fr)] items-center gap-12 px-5">
           {/* Left: logo/brand */}
           <div className="flex items-center gap-4">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-amber-400 text-lg font-bold text-amber-300">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--navbar-accent-strong)] text-lg font-bold text-[var(--navbar-accent)]">
               L
             </span>
             <span className="flex flex-col leading-tight">
@@ -79,7 +81,7 @@ export default function Navbar() {
                 <li key={item}>
                   <Link
                     href="#"
-                    className="border-b-2 border-transparent pb-1 transition-colors hover:border-amber-400 hover:text-white"
+                    className="border-b-2 border-transparent pb-1 transition-colors hover:border-[var(--navbar-accent-strong)] hover:text-white"
                   >
                     {item}
                   </Link>
