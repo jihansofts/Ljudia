@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import Navbar from "@/components/layout/Navbar";
 import { useRouter } from "next/router";
 import { Poppins } from "next/font/google";
+import Footer from "@/components/layout/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,9 +18,12 @@ export default function App({ Component, pageProps }) {
   return (
     <div className={poppins.variable}>
       <Navbar />
+
       <main id="main-content" className={isHomePage ? "" : "pt-[126px]"}>
         <Component {...pageProps} />
       </main>
+
+      <Footer />
     </div>
   );
 }
