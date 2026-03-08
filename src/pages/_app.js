@@ -1,5 +1,4 @@
 import "@/styles/globals.css";
-import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import { useRouter } from "next/router";
 import { Poppins } from "next/font/google";
@@ -21,7 +20,6 @@ export default function App({ Component, pageProps }) {
       <main id="main-content" className={isHomePage ? "" : "pt-[126px]"}>
         <Component {...pageProps} />
       </main>
-      {/* <Footer /> */}
     </div>
   );
 }
