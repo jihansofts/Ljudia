@@ -92,7 +92,7 @@ function SocialLink({ href, label, icon }) {
     <Link
       href={href}
       aria-label={label}
-      className="flex h-12 w-12 items-center justify-center rounded-full border border-[var(--navbar-accent)] text-[var(--navbar-accent)] transition-colors hover:bg-[var(--navbar-accent)] hover:text-[var(--navbar-surface)]"
+      className="flex h-12 w-12 items-center justify-center rounded-full border border-white text-white transition-colors hover:bg-[var(--navbar-accent)] hover:text-[var(--navbar-surface)]"
     >
       {icon}
     </Link>
@@ -104,7 +104,7 @@ export default function Footer() {
 
   return (
     <footer className="mt-0">
-      <div className="bg-[var(--navbar-surface)] text-[var(--navbar-accent)]">
+      <div className="bg-[var(--navbar-surface)] text-white">
         <div className="mx-auto max-w-[1400px] px-6 py-14 sm:px-10 lg:px-16 lg:py-16">
           <div className="grid gap-10 border-b border-white/10 pb-12 lg:grid-cols-[minmax(0,1.45fr)_repeat(4,minmax(0,1fr))] lg:gap-8">
             <div className="max-w-sm space-y-10">
@@ -124,7 +124,7 @@ export default function Footer() {
               </Link>
 
               <div className="space-y-5">
-                <p className="text-xl font-light tracking-[0.01em] text-[var(--navbar-accent)]">
+                <p className="text-xl font-light tracking-[0.01em] text-white">
                   Stay in touch with us
                 </p>
 
@@ -138,16 +138,16 @@ export default function Footer() {
 
             {FOOTER_COLUMNS.map((column) => (
               <div key={column.title} className="space-y-4">
-                <h2 className="max-w-[12rem] text-lg font-semibold uppercase leading-tight tracking-[0.08em] text-[var(--navbar-accent)]">
+                <h2 className="max-w-[12rem] text-lg font-semibold uppercase leading-tight tracking-[0.08em] text-white">
                   {column.title}
                 </h2>
 
-                <ul className="space-y-3 text-xs uppercase tracking-[0.08em] text-[var(--navbar-accent)]">
+                <ul className="space-y-3 text-xs uppercase tracking-[0.08em] text-white">
                   {column.links.map((link) => (
                     <li key={link}>
                       <Link
                         href="#"
-                        className="transition-colors hover:text-[var(--navbar-accent-strong)]"
+                        className="transition-colors hover:text-[var(--navbar-accent)]"
                       >
                         {link}
                       </Link>

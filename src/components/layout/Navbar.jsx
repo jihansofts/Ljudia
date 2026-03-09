@@ -46,7 +46,7 @@ export default function Navbar() {
               <li>
                 <Link
                   href="#"
-                  className="tracking-[0.18em] hover:text-[var(--navbar-accent)]"
+                  className="tracking-[0.18em] text-white transition-colors hover:text-white"
                 >
                   Contact Us
                 </Link>
@@ -77,7 +77,7 @@ export default function Navbar() {
                 <li key={item}>
                   <Link
                     href="#"
-                    className="border-b-2 border-transparent pb-1 transition-colors hover:border-[var(--navbar-accent-strong)] hover:text-white"
+                    className="border-b-2 border-transparent pb-1 text-white transition-colors hover:border-[var(--navbar-accent-strong)] hover:text-white"
                   >
                     {item}
                   </Link>
