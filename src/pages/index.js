@@ -8,6 +8,7 @@ export default function Home() {
     <>
       <HomeSection />
       <DualDivSection
+        id="who-we-are"
         image="/images/homepage_vision_driven.jpg"
         smallTitle="WHO WE ARE"
         title={
@@ -22,6 +23,7 @@ export default function Home() {
       />
       <WhatweDo />
       <DualDivSection
+        id="people-careers"
         image="/images/homepage_peoples_and_careers.avif"
         smallTitle="People & Careers"
         title={
@@ -36,6 +38,7 @@ export default function Home() {
       />
       <GrowWithus />
       <DualDivSection
+        id="investor-relations"
         image="/images/homepage_investor_relations.avif"
         smallTitle="INVESTOR RELATIONS"
         title={

@@ -4,7 +4,10 @@ import RoundedTwoCornerButton from "@/components/ui/RoundedTwoCornerButton";
 
 export default function GrowWithus() {
   return (
-    <section className="relative isolate min-h-[42rem] overflow-hidden bg-stone-950">
+    <section
+      id="leadership-institute"
+      className="relative isolate min-h-[42rem] scroll-mt-28 overflow-hidden bg-stone-950"
+    >
       <Image
         src="/images/leadership-institute-spotlight.jpeg"
         alt="Leadership Institute participants collaborating in a development session."

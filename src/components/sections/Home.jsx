@@ -45,7 +45,10 @@ export default function HomeSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-stone-950">
+    <section
+      id="home"
+      className="relative min-h-screen scroll-mt-28 overflow-hidden bg-stone-950"
+    >
       {VIDEOS.map((video) => {
         const isActive = video.id === activeVideoId;
 

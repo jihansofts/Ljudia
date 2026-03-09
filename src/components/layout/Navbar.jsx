@@ -4,17 +4,21 @@ import { useEffect, useState } from "react";
 import { BsSearch } from "react-icons/bs";
 
 const NAV_ITEMS = [
-  "WHO WE ARE",
-  "WHAT WE DO",
-  "PEOPLE & CAREERS",
-  "OUR SUCCESS",
-  <>
-    <BsSearch />
-  </>,
+  { label: "Home", href: "/#home" },
+  { label: "WHO WE ARE", href: "/#who-we-are" },
+  { label: "PEOPLE & CAREERS", href: "/#people-careers" },
+  {
+    label: "The Leadership Institute",
+    href: "/#leadership-institute",
+  },
+  { label: "INVESTOR RELATIONS", href: "/#investor-relations" },
 ];
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const visibleNavItems = isScrolled
+    ? [...NAV_ITEMS, { label: "SEARCH", href: "#" }]
+    : NAV_ITEMS;
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 40);
@@ -73,13 +77,13 @@ export default function Navbar() {
           {/* Center: main nav items */}
           <div className="flex min-w-0 items-center justify-end">
             <ul className="flex items-center gap-8 text-[11px] xl:gap-10">
-              {NAV_ITEMS.map((item) => (
-                <li key={item}>
+              {visibleNavItems.map((item) => (
+                <li key={item.label}>
                   <Link
-                    href="#"
+                    href={item.href}
                     className="border-b-2 border-transparent pb-1 text-white transition-colors hover:border-[var(--navbar-accent-strong)] hover:text-white"
                   >
-                    {item}
+                    {item.label === "SEARCH" ? <BsSearch /> : item.label}
                   </Link>
                 </li>
               ))}

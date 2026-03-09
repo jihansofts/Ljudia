@@ -2,6 +2,7 @@ import RoundedTwoCornerButton from "@/components/ui/RoundedTwoCornerButton";
 import Image from "next/image";
 
 export default function DualDivSection({
+  id,
   image,
   imageAlt,
   smallTitle,
@@ -10,28 +11,30 @@ export default function DualDivSection({
   buttonName,
 }) {
   return (
-    <div className="flex gap-10 py-10">
+    <section id={id} className="scroll-mt-28">
+      <div className="flex gap-10 py-10">
       {/* Left Image */}
-      <div className="flex w-1/2 items-center justify-center px-5">
+        <div className="flex w-1/2 items-center justify-center px-5">
         <Image
           src={image}
           alt={imageAlt ?? smallTitle}
           width={400}
           height={300}
         />
-      </div>
+        </div>
 
       {/* Right Content */}
-      <div className="w-1/2 pl-5 pr-30">
-        <h2 className="text-xl text-gray-500">{smallTitle}</h2>
-        <h1 className="text-7xl font-bold mt-2">{title}</h1>
-        <p className="text-md mt-4 mb-5 text-gray-600">{description}</p>
+        <div className="w-1/2 pl-5 pr-30">
+          <h2 className="text-xl text-gray-500">{smallTitle}</h2>
+          <h1 className="mt-2 text-7xl font-bold">{title}</h1>
+          <p className="text-md mt-4 mb-5 text-gray-600">{description}</p>
 
-        {/* Button */}
-        {buttonName ? (
-          <RoundedTwoCornerButton>{buttonName}</RoundedTwoCornerButton>
-        ) : null}
+          {/* Button */}
+          {buttonName ? (
+            <RoundedTwoCornerButton>{buttonName}</RoundedTwoCornerButton>
+          ) : null}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
