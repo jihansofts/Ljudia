@@ -6,9 +6,7 @@ const NAV_ITEMS = [
   "WHO WE ARE",
   "WHAT WE DO",
   "PEOPLE & CAREERS",
-  "THE LEADERSHIP INSTITUTE",
-  "INVESTOR RELATIONS",
-  "MEDIA CENTRE",
+  "OUR SUCCESS",
 ];
 
 export default function Navbar() {
