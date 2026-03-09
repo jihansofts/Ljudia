@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BsSearch } from "react-icons/bs";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const NAV_ITEMS = [
   { label: "Home", href: "/#home" },
@@ -16,6 +17,7 @@ const NAV_ITEMS = [
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const visibleNavItems = isScrolled
     ? [...NAV_ITEMS, { label: "SEARCH", href: "#" }]
     : NAV_ITEMS;
@@ -26,6 +28,21 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) {
+      return undefined;
+    }
+
+    const onResize = () => {
+      if (window.innerWidth >= 992) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, [isMobileMenuOpen]);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 text-white">
@@ -41,7 +58,7 @@ export default function Navbar() {
         {/* Top header bar*/}
         <div
           className={[
-            "overflow-hidden bg-[var(--navbar-surface)] transition-all duration-200",
+            "hidden overflow-hidden bg-[var(--navbar-surface)] transition-all duration-200 md:block",
             isScrolled ? "max-h-0 opacity-0" : "max-h-[38px] opacity-100",
           ].join(" ")}
         >
@@ -61,21 +78,23 @@ export default function Navbar() {
         </div>
 
         {/* Main nav row */}
-        <div className="grid h-[70px] grid-cols-[auto_minmax(0,1fr)] items-center gap-12 px-5">
+        <div className="grid h-[70px] grid-cols-[auto_auto] items-center justify-between gap-6 px-5 lg:grid-cols-[auto_minmax(0,1fr)] lg:gap-12">
           {/* Left: logo/brand */}
           <div className="flex items-center">
-            <Image
-              src="/images/Logo-light.png"
-              alt="Ljudia"
-              width={1500}
-              height={1394}
-              priority
-              className="h-12 w-auto object-contain"
-            />
+            <Link href="/#home" onClick={() => setIsMobileMenuOpen(false)}>
+              <Image
+                src="/images/Logo-light.png"
+                alt="Ljudia"
+                width={1500}
+                height={1394}
+                priority
+                className="h-10 w-auto object-contain sm:h-12"
+              />
+            </Link>
           </div>
 
           {/* Center: main nav items */}
-          <div className="flex min-w-0 items-center justify-end">
+          <div className="hidden min-w-0 items-center justify-end lg:flex">
             <ul className="flex items-center gap-8 text-[11px] xl:gap-10">
               {visibleNavItems.map((item) => (
                 <li key={item.label}>
@@ -87,6 +106,50 @@ export default function Navbar() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          <button
+            type="button"
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-nav-menu"
+            onClick={() => setIsMobileMenuOpen((currentValue) => !currentValue)}
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/30 text-white transition-colors hover:border-white lg:hidden"
+          >
+            <RxHamburgerMenu className="text-2xl" />
+          </button>
+        </div>
+
+        <div
+          id="mobile-nav-menu"
+          className={[
+            "border-t border-white/10 bg-[var(--navbar-surface)] lg:hidden",
+            isMobileMenuOpen ? "block" : "hidden",
+          ].join(" ")}
+        >
+          <div className="px-5 py-4">
+            <ul className="flex flex-col gap-1 text-[11px]">
+              {visibleNavItems.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex min-h-11 items-center border-b border-white/10 py-3 text-white transition-colors hover:text-[var(--navbar-accent)]"
+                  >
+                    {item.label === "SEARCH" ? <BsSearch /> : item.label}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="#"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex min-h-11 items-center py-3 text-white transition-colors hover:text-[var(--navbar-accent)]"
+                >
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
