@@ -18,7 +18,7 @@ const NAV_ITEMS = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const visibleNavItems = isScrolled
+  const desktopNavItems = isScrolled
     ? [...NAV_ITEMS, { label: "SEARCH", href: "#" }]
     : NAV_ITEMS;
 
@@ -96,7 +96,7 @@ export default function Navbar() {
           {/* Center: main nav items */}
           <div className="hidden min-w-0 items-center justify-end lg:flex">
             <ul className="flex items-center gap-8 text-[11px] xl:gap-10">
-              {visibleNavItems.map((item) => (
+              {desktopNavItems.map((item) => (
                 <li key={item.label}>
                   <Link
                     href={item.href}
@@ -109,16 +109,28 @@ export default function Navbar() {
             </ul>
           </div>
 
-          <button
-            type="button"
-            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isMobileMenuOpen}
-            aria-controls="mobile-nav-menu"
-            onClick={() => setIsMobileMenuOpen((currentValue) => !currentValue)}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/30 text-white transition-colors hover:border-white lg:hidden"
-          >
-            <RxHamburgerMenu className="text-2xl" />
-          </button>
+          <div className="flex items-center gap-3 lg:hidden">
+            <Link
+              href="#"
+              aria-label="Search"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/30 text-white transition-colors hover:border-white"
+            >
+              <BsSearch className="text-xl" />
+            </Link>
+
+            <button
+              type="button"
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-nav-menu"
+              onClick={() =>
+                setIsMobileMenuOpen((currentValue) => !currentValue)
+              }
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/30 text-white transition-colors hover:border-white"
+            >
+              <RxHamburgerMenu className="text-2xl" />
+            </button>
+          </div>
         </div>
 
         <div
@@ -130,14 +142,14 @@ export default function Navbar() {
         >
           <div className="px-5 py-4">
             <ul className="flex flex-col gap-1 text-[11px]">
-              {visibleNavItems.map((item) => (
+              {NAV_ITEMS.map((item) => (
                 <li key={item.label}>
                   <Link
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="flex min-h-11 items-center border-b border-white/10 py-3 text-white transition-colors hover:text-[var(--navbar-accent)]"
                   >
-                    {item.label === "SEARCH" ? <BsSearch /> : item.label}
+                    {item.label}
                   </Link>
                 </li>
               ))}
