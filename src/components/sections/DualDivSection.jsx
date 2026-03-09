@@ -10,9 +10,9 @@ export default function DualDivSection({
   buttonName,
 }) {
   return (
-    <div className="flex justify-center items-center gap-10 py-10">
+    <div className="flex gap-10 py-10">
       {/* Left Image */}
-      <div className="w-1/2 pl-30 pr-5">
+      <div className="flex w-1/2 items-center justify-center px-5">
         <Image
           src={image}
           alt={imageAlt ?? smallTitle}
