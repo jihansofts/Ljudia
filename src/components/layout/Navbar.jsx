@@ -78,7 +78,7 @@ export default function Navbar() {
         </div>
 
         {/* Main nav row */}
-        <div className="grid h-[70px] grid-cols-[auto_auto] items-center justify-between gap-6 px-5 lg:grid-cols-[auto_minmax(0,1fr)] lg:gap-12">
+        <div className="grid h-[90px] grid-cols-[auto_auto] items-center justify-between gap-6 px-5 lg:grid-cols-[auto_minmax(0,1fr)] lg:gap-12">
           {/* Left: logo/brand */}
           <div className="flex items-center">
             <Link href="/#home" onClick={() => setIsMobileMenuOpen(false)}>

@@ -19,7 +19,7 @@ export default function DualDivSection({
               src={image}
               alt={imageAlt ?? smallTitle}
               width={1200}
-              height={900}
+              height={700}
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="h-auto w-full object-cover"
             />

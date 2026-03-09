@@ -105,7 +105,7 @@ export default function Footer() {
   return (
     <footer className="mt-0">
       <div className="bg-[var(--navbar-surface)] text-white">
-        <div className="mx-auto max-w-[1400px] px-6 py-12 sm:px-10 sm:py-14 lg:px-16 lg:py-16">
+        <div className="mx-auto max-w-full px-6 py-12 sm:px-10 sm:py-14 lg:px-16 lg:py-16">
           <div className="grid gap-10 border-b border-white/10 pb-10 sm:pb-12 md:grid-cols-2 md:gap-12 xl:grid-cols-[minmax(0,1.3fr)_repeat(4,minmax(0,1fr))] xl:gap-8">
             <div className="space-y-8 md:col-span-2 xl:col-span-1">
               <Link
