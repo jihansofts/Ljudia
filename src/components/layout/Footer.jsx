@@ -105,9 +105,9 @@ export default function Footer() {
   return (
     <footer className="mt-0">
       <div className="bg-[var(--navbar-surface)] text-white">
-        <div className="mx-auto max-w-[1400px] px-6 py-14 sm:px-10 lg:px-16 lg:py-16">
-          <div className="grid gap-10 border-b border-white/10 pb-12 lg:grid-cols-[minmax(0,1.45fr)_repeat(4,minmax(0,1fr))] lg:gap-8">
-            <div className="max-w-sm space-y-10">
+        <div className="mx-auto max-w-[1400px] px-6 py-12 sm:px-10 sm:py-14 lg:px-16 lg:py-16">
+          <div className="grid gap-10 border-b border-white/10 pb-10 sm:pb-12 md:grid-cols-2 md:gap-12 xl:grid-cols-[minmax(0,1.3fr)_repeat(4,minmax(0,1fr))] xl:gap-8">
+            <div className="space-y-8 md:col-span-2 xl:col-span-1">
               <Link
                 href="/"
                 aria-label="Majid Al Futtaim home"
@@ -124,11 +124,11 @@ export default function Footer() {
               </Link>
 
               <div className="space-y-5">
-                <p className="text-xl font-light tracking-[0.01em] text-white">
+                <p className="text-lg font-light tracking-[0.01em] text-white sm:text-xl">
                   Stay in touch with us
                 </p>
 
-                <div className="flex max-w-xs flex-wrap gap-4">
+                <div className="flex max-w-sm flex-wrap gap-3 sm:gap-4">
                   {SOCIAL_LINKS.map((link) => (
                     <SocialLink key={link.label} {...link} />
                   ))}
@@ -138,11 +138,11 @@ export default function Footer() {
 
             {FOOTER_COLUMNS.map((column) => (
               <div key={column.title} className="space-y-4">
-                <h2 className="max-w-[12rem] text-lg font-semibold uppercase leading-tight tracking-[0.08em] text-white">
+                <h2 className="max-w-[14rem] text-base font-semibold uppercase leading-tight tracking-[0.08em] text-white sm:text-lg">
                   {column.title}
                 </h2>
 
-                <ul className="space-y-3 text-xs uppercase tracking-[0.08em] text-white">
+                <ul className="space-y-3 text-[11px] uppercase tracking-[0.08em] text-white sm:text-xs">
                   {column.links.map((link) => (
                     <li key={link}>
                       <Link
@@ -161,7 +161,7 @@ export default function Footer() {
       </div>
 
       <div className="bg-[var(--background)]">
-        <div className="mx-auto max-w-[1400px] px-6 py-7 text-sm text-[var(--gray-dark)] sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-[1400px] px-6 py-6 text-center text-xs text-[var(--gray-dark)] sm:px-10 sm:text-sm lg:px-16 lg:text-left">
           <p>&copy; {currentYear} Majid Al Futtaim. All rights reserved.</p>
         </div>
       </div>
