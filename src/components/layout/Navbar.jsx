@@ -1,12 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { BsSearch } from "react-icons/bs";
 
 const NAV_ITEMS = [
   "WHO WE ARE",
   "WHAT WE DO",
   "PEOPLE & CAREERS",
   "OUR SUCCESS",
+  <>
+    <BsSearch />
+  </>,
 ];
 
 export default function Navbar() {
@@ -47,16 +51,7 @@ export default function Navbar() {
                   Contact Us
                 </Link>
               </li>
-              <li>
-                <button className="tracking-[0.18em] hover:text-[var(--navbar-accent)]">
-                  A A
-                </button>
-              </li>
-              <li>
-                <button className="tracking-[0.18em] hover:text-[var(--navbar-accent)]">
-                  العربية
-                </button>
-              </li>
+              <BsSearch />
             </ul>
           </div>
         </div>

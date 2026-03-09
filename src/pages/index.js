@@ -1,6 +1,7 @@
 import HomeSection from "@/components/sections/Home";
 import DualDivSection from "@/components/sections/DualDivSection";
 import WhatweDo from "@/components/sections/WhatweDo";
+import GrowWithus from "@/components/sections/GrowWithus";
 
 export default function Home() {
   return (
@@ -33,7 +34,7 @@ export default function Home() {
         description="At our core, we are a values-led organisation that is bold, passionate and together in all that we do – underpinned by a culture that is inspired by a dynamic, entrepreneurial spirit."
         buttonName="Explore the Journey"
       />
-
+      <GrowWithus />
       <DualDivSection
         image="/images/homepage_investor_relations.avif"
         smallTitle="INVESTOR RELATIONS"
