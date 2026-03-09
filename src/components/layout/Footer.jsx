@@ -1,5 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CiFacebook } from "react-icons/ci";
+import { FaInstagram } from "react-icons/fa6";
+import { BsTiktok } from "react-icons/bs";
+import { SlSocialYoutube } from "react-icons/sl";
+import { FaXTwitter } from "react-icons/fa6";
+import { RiLinkedinLine } from "react-icons/ri";
+import { AiOutlineMedium } from "react-icons/ai";
 
 const FOOTER_COLUMNS = [
   {
@@ -46,73 +53,37 @@ const SOCIAL_LINKS = [
   {
     label: "Facebook",
     href: "#",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-current">
-        <path d="M13.5 21v-7.1h2.4l.4-2.8h-2.8V9.3c0-.8.2-1.4 1.4-1.4h1.5V5.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4.1v1.7H7.9v2.8h2.3V21h3.3Z" />
-      </svg>
-    ),
+    icon: <CiFacebook />,
   },
   {
     label: "Instagram",
     href: "#",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-        className="h-5 w-5 fill-none stroke-current"
-      >
-        <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5.5" strokeWidth="1.7" />
-        <circle cx="12" cy="12" r="4" strokeWidth="1.7" />
-        <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none" />
-      </svg>
-    ),
+    icon: <FaInstagram />,
   },
   {
     label: "TikTok",
     href: "#",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-current">
-        <path d="M14.6 3c.4 2 1.5 3.4 3.4 4.2v2.4c-1.4 0-2.6-.4-3.8-1.2v5.3a5.1 5.1 0 1 1-5-5.1c.3 0 .6 0 .9.1v2.5a2.5 2.5 0 1 0 1.7 2.4V3h2.8Z" />
-      </svg>
-    ),
+    icon: <BsTiktok />,
   },
   {
     label: "YouTube",
     href: "#",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-current">
-        <path d="M21 12c0-2.4-.2-4-.6-4.9-.3-.7-.9-1.2-1.6-1.5C17.9 5.2 12 5.2 12 5.2s-5.9 0-6.8.4c-.7.3-1.3.8-1.6 1.5C3.2 8 3 9.6 3 12c0 2.4.2 4 .6 4.9.3.7.9 1.2 1.6 1.5.9.4 6.8.4 6.8.4s5.9 0 6.8-.4c.7-.3 1.3-.8 1.6-1.5.4-.9.6-2.5.6-4.9Zm-11.4 3.4V8.6l5.6 3.4-5.6 3.4Z" />
-      </svg>
-    ),
+    icon: <SlSocialYoutube />,
   },
   {
     label: "X",
     href: "#",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-        className="h-5 w-5 fill-none stroke-current"
-      >
-        <path d="M4.5 4.5 19.5 19.5M19.5 4.5 4.5 19.5" strokeWidth="1.8" strokeLinecap="round" />
-      </svg>
-    ),
+    icon: <FaXTwitter />,
   },
   {
     label: "LinkedIn",
     href: "#",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-current">
-        <path d="M6.4 8.3A1.9 1.9 0 1 0 6.3 4.5a1.9 1.9 0 0 0 .1 3.8ZM4.8 9.9h3.1V19H4.8V9.9Zm5 0H13v1.3h.1c.4-.8 1.5-1.7 3.1-1.7 3.3 0 3.9 2.2 3.9 5V19H17v-4c0-.9 0-2.1-1.3-2.1s-1.5 1-1.5 2V19h-3.1V9.9Z" />
-      </svg>
-    ),
+    icon: <RiLinkedinLine />,
   },
   {
     label: "Medium",
     href: "#",
-    icon: (
-      <span className="text-lg font-semibold leading-none">M</span>
-    ),
+    icon: <AiOutlineMedium />,
   },
 ];
 
@@ -137,7 +108,11 @@ export default function Footer() {
         <div className="mx-auto max-w-[1400px] px-6 py-14 sm:px-10 lg:px-16 lg:py-16">
           <div className="grid gap-10 border-b border-white/10 pb-12 lg:grid-cols-[minmax(0,1.45fr)_repeat(4,minmax(0,1fr))] lg:gap-8">
             <div className="max-w-sm space-y-10">
-              <Link href="/" aria-label="Majid Al Futtaim home" className="inline-flex">
+              <Link
+                href="/"
+                aria-label="Majid Al Futtaim home"
+                className="inline-flex"
+              >
                 <Image
                   src="/images/Logo-light.png"
                   alt="Majid Al Futtaim"
