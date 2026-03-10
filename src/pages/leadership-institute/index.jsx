@@ -203,16 +203,16 @@ export default function LeadershipInstitutePage() {
 
       <section id="key-facts" ref={keyFactsRef} className="bg-[#e8e8e8]">
         <div className="mx-auto flex min-h-[30rem] max-w-[1400px] flex-col justify-between px-6 py-16 sm:min-h-[34rem] sm:px-10 sm:py-20 lg:min-h-[38rem] lg:px-16 lg:py-24">
-          <h2 className="max-w-md text-5xl font-bold leading-[1.08] text-black sm:text-6xl">
+          <h2 className="max-w-md text-4xl font-bold leading-[1.08] text-black sm:text-5xl lg:text-6xl">
             Key Facts
             <br />
             (2024)
           </h2>
 
-          <div className="mt-14 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-10 lg:mt-20 lg:grid-cols-4 lg:gap-8">
+          <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-10 lg:mt-20 lg:grid-cols-4 lg:gap-8">
             {KEY_FACTS.map((fact, index) => (
               <article key={fact.label} className="text-center lg:self-end">
-                <p className="text-5xl font-semibold tracking-tight text-[#a98b58] sm:text-6xl">
+                <p className="text-4xl font-semibold tracking-tight text-[#a98b58] sm:text-5xl lg:text-6xl">
                   {formatCounter(counterValues[index], fact)}
                 </p>
                 <p className="mx-auto mt-4 max-w-[14rem] text-xs font-semibold uppercase leading-[1.35] tracking-[0.16em] text-black sm:text-sm">
@@ -225,12 +225,12 @@ export default function LeadershipInstitutePage() {
       </section>
 
       <section id="learning" className="bg-white">
-        <div className="mx-auto max-w-[1400px] px-6 py-14 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
-          <h2 className="text-5xl font-bold leading-none tracking-tight text-black sm:text-6xl lg:text-7xl">
+        <div className="mx-auto max-w-[1400px] px-6 py-12 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+          <h2 className="text-3xl font-bold leading-[1.05] tracking-tight text-black sm:text-5xl lg:text-7xl">
             LEARNING
           </h2>
 
-          <div className="mt-12 grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 justify-items-center gap-8 md:grid-cols-2 xl:grid-cols-3">
             {LEARNING_CARDS.map((card) => (
               <AcademyCard
                 key={card.title}
@@ -245,12 +245,12 @@ export default function LeadershipInstitutePage() {
       </section>
 
       <section id="leadership-development" className="bg-[#f6f6f6]">
-        <div className="mx-auto max-w-[1400px] px-6 py-14 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
-          <h2 className="text-5xl font-bold leading-none tracking-tight text-black sm:text-6xl lg:text-7xl">
+        <div className="mx-auto max-w-[1400px] px-6 py-12 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+          <h2 className="text-3xl font-bold leading-[1.05] tracking-tight text-black sm:text-5xl lg:text-7xl">
             LEADERSHIP DEVELOPMENT
           </h2>
 
-          <div className="mt-12 grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 justify-items-center gap-8 md:grid-cols-2 xl:grid-cols-3">
             {LEADERSHIP_DEVELOPMENT_CARDS.map((card) => (
               <AcademyCard
                 key={card.title}
@@ -265,12 +265,12 @@ export default function LeadershipInstitutePage() {
       </section>
 
       <section id="learning-leadership-community" className="bg-white">
-        <div className="mx-auto max-w-[1400px] px-6 py-14 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
-          <h2 className="text-5xl font-bold leading-none tracking-tight text-black sm:text-6xl lg:text-7xl">
+        <div className="mx-auto max-w-[1400px] px-6 py-12 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+          <h2 className="max-w-5xl text-balance text-3xl font-bold leading-[1.05] tracking-tight text-black sm:text-5xl lg:text-7xl">
             LEARNING &amp; LEADERSHIP COMMUNITY
           </h2>
 
-          <div className="mt-12 grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 justify-items-center gap-8 md:grid-cols-2 xl:grid-cols-3">
             {LEARNING_LEADERSHIP_COMMUNITY_CARDS.map((card) => (
               <AcademyCard
                 key={card.title}

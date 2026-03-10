@@ -13,7 +13,10 @@ export default function InvestorRelationsPage() {
   return (
     <section id="investor-relations-terms" className="bg-[#e8e8e8]">
       <div className="mx-auto max-w-[1400px] px-6 py-12 sm:px-10 sm:py-14 lg:px-16 lg:py-16">
-        <nav aria-label="Breadcrumb" className="text-sm uppercase tracking-[0.08em]">
+        <nav
+          aria-label="Breadcrumb"
+          className="text-xs uppercase tracking-[0.08em] sm:text-sm"
+        >
           <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[#1f1f1f]">
             <li>
               <Link href="/" className="transition-colors hover:text-black">
@@ -34,12 +37,12 @@ export default function InvestorRelationsPage() {
           </ol>
         </nav>
 
-        <div className="mx-auto mt-14 max-w-[52rem] lg:mt-20">
-          <h1 className="text-5xl font-semibold leading-tight text-black sm:text-6xl">
+        <div className="mx-auto mt-12 max-w-[52rem] lg:mt-20">
+          <h1 className="text-4xl font-semibold leading-tight text-black sm:text-5xl lg:text-6xl">
             Terms of Use
           </h1>
 
-          <div className="mt-10 space-y-8 text-base leading-9 tracking-[0.02em] text-[#1f1f1f] sm:text-[1.06rem]">
+          <div className="mt-8 space-y-7 text-[0.98rem] leading-8 tracking-[0.02em] text-[#1f1f1f] sm:mt-10 sm:space-y-8 sm:text-[1.06rem] sm:leading-9">
             {TERMS_PARAGRAPHS.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
@@ -47,7 +50,7 @@ export default function InvestorRelationsPage() {
 
           <button
             type="button"
-            className="mt-10 rounded-tr-[2rem] rounded-bl-[2rem] bg-[#970f3f] px-10 py-5 text-lg font-semibold tracking-[0.03em] text-white transition-colors hover:bg-[#7e0d35]"
+            className="mt-10 w-full rounded-tr-[2rem] rounded-bl-[2rem] bg-[#970f3f] px-6 py-4 text-center text-base font-semibold leading-tight tracking-[0.02em] text-white transition-colors hover:bg-[#7e0d35] sm:w-auto sm:px-10 sm:py-5 sm:text-lg"
           >
             I Agree To Access The Investor Relations Section
           </button>

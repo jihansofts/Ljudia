@@ -11,11 +11,11 @@ export default function AcademyCard({
   return (
     <article
       className={[
-        "w-full max-w-[23rem] space-y-6 text-[var(--gray-dark)]",
+        "mx-auto w-full max-w-[23rem] space-y-4 text-[var(--gray-dark)] sm:space-y-6",
         className,
       ].join(" ")}
     >
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-tr-[4rem] rounded-bl-[4rem] bg-stone-200">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-tr-[2.5rem] rounded-bl-[2.5rem] bg-stone-200 sm:rounded-tr-[4rem] sm:rounded-bl-[4rem]">
         <Image
           src={image}
           alt={imageAlt ?? title}
@@ -27,10 +27,10 @@ export default function AcademyCard({
       </div>
 
       <div className="space-y-5">
-        <h3 className="text-4xl font-semibold leading-tight text-black">
+        <h3 className="text-2xl font-semibold leading-tight text-black sm:text-3xl lg:text-4xl">
           {title}
         </h3>
-        <p className="text-base leading-9 text-[var(--gray-dark)]">
+        <p className="text-[0.97rem] leading-7 text-[var(--gray-dark)] sm:text-base sm:leading-8">
           {description}
         </p>
       </div>
