@@ -1,5 +1,6 @@
 import GrowWithus from "@/components/sections/GrowWithus";
 import DualDivSection from "@/components/sections/DualDivSection";
+import AcademyCard from "@/components/ui/AcademyCard";
 import { useEffect, useRef, useState } from "react";
 
 const KEY_FACTS = [
@@ -12,6 +13,34 @@ const KEY_FACTS = [
     decimals: 1,
   },
   { target: 11, label: "academies", suffix: "", decimals: 0 },
+];
+
+const LEARNING_CARD_IMAGE =
+  "https://plus.unsplash.com/premium_photo-1772065874031-4fcaadd5a42f?q=80&w=740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+
+const LEARNING_CARDS = [
+  {
+    image: LEARNING_CARD_IMAGE,
+    imageAlt: "Leadership workshop environment designed for collaborative learning.",
+    title: "Induction Academy",
+    description:
+      "A structured onboarding journey that helps new colleagues quickly understand our culture, values, and ways of working through practical, people-first learning moments.",
+  },
+  {
+    image: LEARNING_CARD_IMAGE,
+    imageAlt:
+      "Participants joining a facilitated academy session focused on skills growth.",
+    title: "Leadership Essentials",
+    description:
+      "A capability-building path for current and emerging leaders to strengthen coaching, decision-making, and team alignment across dynamic business environments.",
+  },
+  {
+    image: LEARNING_CARD_IMAGE,
+    imageAlt: "Modern learning space prepared for immersive training activities.",
+    title: "Digital Learning Hub",
+    description:
+      "An always-on ecosystem of curated programs, peer learning circles, and role-based pathways that enables continuous development in the flow of daily work.",
+  },
 ];
 
 function formatCounter(value, fact) {
@@ -130,6 +159,26 @@ export default function LeadershipInstitutePage() {
                   {fact.label}
                 </p>
               </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="learning" className="bg-white">
+        <div className="mx-auto max-w-[1400px] px-6 py-14 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+          <h2 className="text-5xl font-bold leading-none tracking-tight text-black sm:text-6xl lg:text-7xl">
+            LEARNING
+          </h2>
+
+          <div className="mt-12 grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2 xl:grid-cols-3">
+            {LEARNING_CARDS.map((card) => (
+              <AcademyCard
+                key={card.title}
+                image={card.image}
+                imageAlt={card.imageAlt}
+                title={card.title}
+                description={card.description}
+              />
             ))}
           </div>
         </div>
