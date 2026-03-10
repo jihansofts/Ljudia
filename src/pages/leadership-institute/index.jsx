@@ -1,6 +1,7 @@
 import GrowWithus from "@/components/sections/GrowWithus";
 import DualDivSection from "@/components/sections/DualDivSection";
 import AcademyCard from "@/components/ui/AcademyCard";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const KEY_FACTS = [
@@ -17,6 +18,7 @@ const KEY_FACTS = [
 
 const LEARNING_CARD_IMAGE =
   "https://plus.unsplash.com/premium_photo-1772065874031-4fcaadd5a42f?q=80&w=740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+const ABOUT_SECTION_IMAGE = "/images/aboutthevenue.avif";
 
 const LEARNING_CARDS = [
   {
@@ -270,6 +272,18 @@ export default function LeadershipInstitutePage() {
               />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="about-image" className="my-10 sm:my-12 lg:my-16">
+        <div className="relative h-[45vh] min-h-[22rem] w-full sm:h-[55vh] lg:h-[68vh]">
+          <Image
+            src={ABOUT_SECTION_IMAGE}
+            alt="Leadership Institute participants collaborating in an immersive learning space."
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
         </div>
       </section>
     </>
