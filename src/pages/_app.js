@@ -13,7 +13,11 @@ const poppins = Poppins({
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
-  const noTopOffsetRoutes = new Set(["/", "/who-we-are"]);
+  const noTopOffsetRoutes = new Set([
+    "/",
+    "/who-we-are",
+    "/leadership-institute",
+  ]);
   const needsTopOffset = !noTopOffsetRoutes.has(router.pathname);
 
   return (
