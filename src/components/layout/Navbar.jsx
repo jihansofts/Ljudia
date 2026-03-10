@@ -5,14 +5,14 @@ import { BsSearch } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const NAV_ITEMS = [
-  { label: "Home", href: "/#home" },
-  { label: "WHO WE ARE", href: "/#who-we-are" },
-  { label: "PEOPLE & CAREERS", href: "/#people-careers" },
+  { label: "Home", href: "/" },
+  { label: "WHO WE ARE", href: "/who-we-are" },
+  { label: "PEOPLE & CAREERS", href: "/people-careers" },
   {
     label: "The Leadership Institute",
-    href: "/#leadership-institute",
+    href: "/leadership-institute",
   },
-  { label: "INVESTOR RELATIONS", href: "/#investor-relations" },
+  { label: "INVESTOR RELATIONS", href: "/investor-relations" },
 ];
 
 export default function Navbar() {
@@ -81,7 +81,7 @@ export default function Navbar() {
         <div className="grid h-[90px] grid-cols-[auto_auto] items-center justify-between gap-6 px-5 lg:grid-cols-[auto_minmax(0,1fr)] lg:gap-12">
           {/* Left: logo/brand */}
           <div className="flex items-center">
-            <Link href="/#home" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
               <Image
                 src="/images/Logo-light.png"
                 alt="Ljudia"
