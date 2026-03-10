@@ -1,7 +1,19 @@
 import Image from "next/image";
 import DualDivSection from "@/components/sections/DualDivSection";
+import RoundedTwoCornerButton from "@/components/ui/RoundedTwoCornerButton";
 
 export default function WhoWeArePage() {
+  const sustainabilityCards = [
+    {
+      src: "/images/creating-impact-spotlight-1.avif",
+      alt: "Sustainability and ESG spotlight",
+    },
+    {
+      src: "/images/who_we_are_corporate_complaince.avif",
+      alt: "Corporate compliance and governance spotlight",
+    },
+  ];
+
   return (
     <>
       <section className="relative isolate min-h-[44rem] overflow-hidden bg-stone-950">
@@ -73,6 +85,38 @@ export default function WhoWeArePage() {
         buttonName="Explore The Journey"
         imageOnRight
       />
+
+      <section id="sustainability-esg" className="bg-white">
+        <div className="flex flex-col lg:flex-row">
+          {sustainabilityCards.map((card) => (
+            <article
+              key={card.src}
+              className="relative isolate min-h-[24rem] w-full overflow-hidden bg-stone-950 sm:min-h-[30rem] lg:min-h-[36rem] lg:flex-1"
+            >
+              <Image
+                src={card.src}
+                alt={card.alt}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/35" />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,24,39,0.2)_0%,rgba(17,24,39,0.68)_100%)]" />
+
+              <div className="relative z-10 flex h-full items-center justify-center p-6 text-center sm:p-8 lg:p-10">
+                <div className="space-y-5 text-white">
+                  <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
+                    Sustainability &amp; ESG
+                  </h1>
+                  <RoundedTwoCornerButton className="px-7 py-4">
+                    Learn More
+                  </RoundedTwoCornerButton>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
     </>
   );
 }
