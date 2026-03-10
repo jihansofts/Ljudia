@@ -9,10 +9,16 @@ export default function DualDivSection({
   title,
   description,
   buttonName,
+  imageOnRight = false,
 }) {
   return (
     <section id={id} className="scroll-mt-28 bg-white">
-      <div className="mx-auto flex max-w-[1400px] flex-col gap-10 px-6 py-12 sm:px-10 sm:py-14 lg:flex-row lg:items-center lg:gap-14 lg:px-16 lg:py-20">
+      <div
+        className={[
+          "mx-auto flex max-w-[1400px] flex-col gap-10 px-6 py-12 sm:px-10 sm:py-14 lg:items-center lg:gap-14 lg:px-16 lg:py-20",
+          imageOnRight ? "lg:flex-row-reverse" : "lg:flex-row",
+        ].join(" ")}
+      >
         <div className="flex w-full items-center justify-center lg:w-1/2">
           <div className="relative w-full overflow-hidden rounded-[2rem] bg-stone-100 shadow-[0_24px_80px_rgba(15,23,42,0.14)]">
             <Image

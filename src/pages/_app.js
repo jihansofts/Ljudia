@@ -13,13 +13,14 @@ const poppins = Poppins({
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
-  const isHomePage = router.pathname === "/";
+  const noTopOffsetRoutes = new Set(["/", "/who-we-are"]);
+  const needsTopOffset = !noTopOffsetRoutes.has(router.pathname);
 
   return (
     <div className={poppins.variable}>
       <Navbar />
 
-      <main id="main-content" className={isHomePage ? "" : "pt-[126px]"}>
+      <main id="main-content" className={needsTopOffset ? "pt-[126px]" : ""}>
         <Component {...pageProps} />
       </main>
 
