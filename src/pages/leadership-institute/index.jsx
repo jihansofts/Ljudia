@@ -1,7 +1,84 @@
 import GrowWithus from "@/components/sections/GrowWithus";
 import DualDivSection from "@/components/sections/DualDivSection";
+import { useEffect, useRef, useState } from "react";
+
+const KEY_FACTS = [
+  { target: 3103, label: "learners", suffix: "", decimals: 0 },
+  { target: 13000, label: "learning hours", suffix: "+", decimals: 0 },
+  {
+    target: 4.7,
+    label: "average learner satisfaction",
+    suffix: "/5",
+    decimals: 1,
+  },
+  { target: 11, label: "academies", suffix: "", decimals: 0 },
+];
+
+function formatCounter(value, fact) {
+  const safeValue = Number.isFinite(value) ? value : 0;
+
+  const formattedValue =
+    fact.decimals > 0
+      ? safeValue.toLocaleString("en-US", {
+          minimumFractionDigits: fact.decimals,
+          maximumFractionDigits: fact.decimals,
+        })
+      : Math.round(safeValue).toLocaleString("en-US");
+
+  return `${formattedValue}${fact.suffix}`;
+}
 
 export default function LeadershipInstitutePage() {
+  const keyFactsRef = useRef(null);
+  const [animateCounters, setAnimateCounters] = useState(false);
+  const [counterValues, setCounterValues] = useState(() =>
+    KEY_FACTS.map(() => 0),
+  );
+
+  useEffect(() => {
+    if (!keyFactsRef.current || animateCounters) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry?.isIntersecting) {
+          setAnimateCounters(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.35 },
+    );
+
+    observer.observe(keyFactsRef.current);
+    return () => observer.disconnect();
+  }, [animateCounters]);
+
+  useEffect(() => {
+    if (!animateCounters) return;
+
+    const durationMs = 1600;
+    let frameId = 0;
+    let startTime = null;
+
+    const animateFrame = (timestamp) => {
+      if (startTime === null) {
+        startTime = timestamp;
+      }
+
+      const progress = Math.min((timestamp - startTime) / durationMs, 1);
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+      setCounterValues(KEY_FACTS.map((fact) => fact.target * easedProgress));
+
+      if (progress < 1) {
+        frameId = requestAnimationFrame(animateFrame);
+      }
+    };
+
+    frameId = requestAnimationFrame(animateFrame);
+    return () => cancelAnimationFrame(frameId);
+  }, [animateCounters]);
+
   return (
     <>
       <GrowWithus />
@@ -34,6 +111,29 @@ export default function LeadershipInstitutePage() {
           </>
         }
       />
+
+      <section id="key-facts" ref={keyFactsRef} className="bg-[#e8e8e8]">
+        <div className="mx-auto flex min-h-[30rem] max-w-[1400px] flex-col justify-between px-6 py-16 sm:min-h-[34rem] sm:px-10 sm:py-20 lg:min-h-[38rem] lg:px-16 lg:py-24">
+          <h2 className="max-w-md text-5xl font-bold leading-[1.08] text-black sm:text-6xl">
+            Key Facts
+            <br />
+            (2024)
+          </h2>
+
+          <div className="mt-14 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-10 lg:mt-20 lg:grid-cols-4 lg:gap-8">
+            {KEY_FACTS.map((fact, index) => (
+              <article key={fact.label} className="text-center lg:self-end">
+                <p className="text-5xl font-semibold tracking-tight text-[#a98b58] sm:text-6xl">
+                  {formatCounter(counterValues[index], fact)}
+                </p>
+                <p className="mx-auto mt-4 max-w-[14rem] text-xs font-semibold uppercase leading-[1.35] tracking-[0.16em] text-black sm:text-sm">
+                  {fact.label}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }
