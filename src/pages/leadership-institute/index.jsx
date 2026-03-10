@@ -43,6 +43,55 @@ const LEARNING_CARDS = [
   },
 ];
 
+const LEADERSHIP_DEVELOPMENT_CARDS = [
+  {
+    image: LEARNING_CARD_IMAGE,
+    imageAlt: "Leadership cohort participating in a facilitated workshop.",
+    title: "Emerging Leaders Pathway",
+    description:
+      "A practical foundation program designed to build confidence, communication skills, and people leadership capabilities for first-time leaders.",
+  },
+  {
+    image: LEARNING_CARD_IMAGE,
+    imageAlt:
+      "Senior professionals collaborating during a leadership development session.",
+    title: "Strategic Leadership Lab",
+    description:
+      "An applied learning experience focused on strategic thinking, cross-functional decision-making, and leading through change across complex environments.",
+  },
+  {
+    image: LEARNING_CARD_IMAGE,
+    imageAlt: "Leadership participants in a modern development academy setup.",
+    title: "Executive Growth Studio",
+    description:
+      "A curated development track that combines coaching, peer exchange, and business simulations to accelerate impact at senior leadership levels.",
+  },
+];
+
+const LEARNING_LEADERSHIP_COMMUNITY_CARDS = [
+  {
+    image: LEARNING_CARD_IMAGE,
+    imageAlt: "Cross-functional colleagues collaborating in a community workshop.",
+    title: "Peer Learning Circle",
+    description:
+      "A community-led format where colleagues exchange practical insights, solve real workplace challenges, and grow through shared experience.",
+  },
+  {
+    image: LEARNING_CARD_IMAGE,
+    imageAlt: "Employees participating in a learning and leadership roundtable.",
+    title: "Mentor Connect Program",
+    description:
+      "A structured mentor-mentee journey that strengthens leadership capability through guided reflection, support, and goal-oriented development.",
+  },
+  {
+    image: LEARNING_CARD_IMAGE,
+    imageAlt: "Community members joining an interactive leadership session.",
+    title: "Leadership Exchange Forum",
+    description:
+      "A recurring forum where teams explore leadership trends, celebrate best practices, and co-create ideas that shape a stronger learning culture.",
+  },
+];
+
 function formatCounter(value, fact) {
   const safeValue = Number.isFinite(value) ? value : 0;
 
@@ -172,6 +221,46 @@ export default function LeadershipInstitutePage() {
 
           <div className="mt-12 grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2 xl:grid-cols-3">
             {LEARNING_CARDS.map((card) => (
+              <AcademyCard
+                key={card.title}
+                image={card.image}
+                imageAlt={card.imageAlt}
+                title={card.title}
+                description={card.description}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="leadership-development" className="bg-[#f6f6f6]">
+        <div className="mx-auto max-w-[1400px] px-6 py-14 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+          <h2 className="text-5xl font-bold leading-none tracking-tight text-black sm:text-6xl lg:text-7xl">
+            LEADERSHIP DEVELOPMENT
+          </h2>
+
+          <div className="mt-12 grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2 xl:grid-cols-3">
+            {LEADERSHIP_DEVELOPMENT_CARDS.map((card) => (
+              <AcademyCard
+                key={card.title}
+                image={card.image}
+                imageAlt={card.imageAlt}
+                title={card.title}
+                description={card.description}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="learning-leadership-community" className="bg-white">
+        <div className="mx-auto max-w-[1400px] px-6 py-14 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+          <h2 className="text-5xl font-bold leading-none tracking-tight text-black sm:text-6xl lg:text-7xl">
+            LEARNING &amp; LEADERSHIP COMMUNITY
+          </h2>
+
+          <div className="mt-12 grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2 xl:grid-cols-3">
+            {LEARNING_LEADERSHIP_COMMUNITY_CARDS.map((card) => (
               <AcademyCard
                 key={card.title}
                 image={card.image}
