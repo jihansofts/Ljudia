@@ -10,21 +10,21 @@ const CAREER_CARDS = [
     imageAlt: "Team members collaborating in a bright office environment.",
     title: "Early Careers",
     description:
-      "A practical launchpad for graduates and new professionals to build core capabilities, contribute to meaningful projects, and grow with continuous mentorship.",
+      "A practical launchpad for graduates and early professionals to build core business capabilities while contributing to meaningful, real-world projects. The experience combines structured onboarding, guided mentorship, and rotational exposure so participants can grow confidence quickly and shape a strong foundation for long-term success.",
   },
   {
     image: "/images/office-images/office-3.jpg",
     imageAlt: "Professionals in a strategy conversation during a team meeting.",
     title: "Professional Growth",
     description:
-      "Role-based pathways and cross-functional opportunities designed to deepen expertise, strengthen leadership potential, and accelerate career progression.",
+      "Role-based pathways and cross-functional opportunities designed to deepen expertise and broaden business perspective. Colleagues gain access to targeted upskilling, stretch assignments, and development conversations that help accelerate progression while strengthening leadership potential at every stage of their journey.",
   },
   {
     image: "/images/office-images/office-4.jpg",
     imageAlt: "Modern collaborative office space representing future-focused careers.",
     title: "Future Skills",
     description:
-      "A forward-looking development journey focused on digital fluency, innovation, and business impact to prepare teams for tomorrow's opportunities.",
+      "A forward-looking development journey focused on digital fluency, innovation, and adaptability for future-ready teams. Through practical learning, collaborative problem-solving, and emerging capability programs, colleagues are equipped to create measurable business impact and lead confidently in evolving markets.",
   },
 ];
 

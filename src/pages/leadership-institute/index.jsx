@@ -16,81 +16,90 @@ const KEY_FACTS = [
   { target: 11, label: "academies", suffix: "", decimals: 0 },
 ];
 
-const LEARNING_CARD_IMAGE =
-  "https://plus.unsplash.com/premium_photo-1772065874031-4fcaadd5a42f?q=80&w=740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 const ABOUT_SECTION_IMAGE = "/images/aboutthevenue.avif";
+const PEOPLE_FOLDER_IMAGES = [
+  "/images/people/maf-leads.avif",
+  "/images/people/learning-activation.avif",
+  "/images/people/ulearn.avif",
+  "/images/people/women-in-leadership.avif",
+  "/images/people/community---picture-3.avif",
+  "/images/people/people-management-academy.webp",
+  "/images/people/uae-national-leadership-image.avif",
+  "/images/people/ai-academy.webp",
+  "/images/people/community---picture-2.avif",
+];
 
 const LEARNING_CARDS = [
   {
-    image: LEARNING_CARD_IMAGE,
+    image: PEOPLE_FOLDER_IMAGES[0],
     imageAlt: "Leadership workshop environment designed for collaborative learning.",
     title: "Induction Academy",
     description:
-      "A structured onboarding journey that helps new colleagues quickly understand our culture, values, and ways of working through practical, people-first learning moments.",
+      "A structured onboarding journey that helps new colleagues understand our culture, values, and operating model through practical learning experiences. Participants build confidence in role expectations, connect with key teams, and gain early exposure to the tools and behaviors that support long-term success.",
   },
   {
-    image: LEARNING_CARD_IMAGE,
+    image: PEOPLE_FOLDER_IMAGES[1],
     imageAlt:
       "Participants joining a facilitated academy session focused on skills growth.",
     title: "Leadership Essentials",
     description:
-      "A capability-building path for current and emerging leaders to strengthen coaching, decision-making, and team alignment across dynamic business environments.",
+      "A capability-building pathway for current and emerging leaders to strengthen coaching, communication, and decision-making. The program combines workshops, real scenarios, and peer reflection to help leaders align teams, improve execution quality, and lead with clarity in fast-changing business environments.",
   },
   {
-    image: LEARNING_CARD_IMAGE,
+    image: PEOPLE_FOLDER_IMAGES[2],
     imageAlt: "Modern learning space prepared for immersive training activities.",
     title: "Digital Learning Hub",
     description:
-      "An always-on ecosystem of curated programs, peer learning circles, and role-based pathways that enables continuous development in the flow of daily work.",
+      "An always-on learning ecosystem with curated pathways, self-paced modules, and collaborative practice communities. Colleagues can upskill in the flow of work, track development goals, and access role-based content that supports immediate performance as well as future career progression.",
   },
 ];
 
 const LEADERSHIP_DEVELOPMENT_CARDS = [
   {
-    image: LEARNING_CARD_IMAGE,
+    image: PEOPLE_FOLDER_IMAGES[3],
     imageAlt: "Leadership cohort participating in a facilitated workshop.",
     title: "Emerging Leaders Pathway",
     description:
-      "A practical foundation program designed to build confidence, communication skills, and people leadership capabilities for first-time leaders.",
+      "A practical foundation experience designed for first-time leaders who are stepping into people management. Participants develop coaching confidence, feedback skills, and performance management habits that help them lead teams effectively while creating trust, accountability, and a strong growth mindset.",
   },
   {
-    image: LEARNING_CARD_IMAGE,
+    image: PEOPLE_FOLDER_IMAGES[4],
     imageAlt:
       "Senior professionals collaborating during a leadership development session.",
     title: "Strategic Leadership Lab",
     description:
-      "An applied learning experience focused on strategic thinking, cross-functional decision-making, and leading through change across complex environments.",
+      "An applied development experience focused on strategic thinking, enterprise priorities, and cross-functional decision-making. Leaders work through complex business cases, sharpen stakeholder management, and practice leading through uncertainty while balancing long-term value creation with near-term delivery.",
   },
   {
-    image: LEARNING_CARD_IMAGE,
+    image: PEOPLE_FOLDER_IMAGES[5],
     imageAlt: "Leadership participants in a modern development academy setup.",
     title: "Executive Growth Studio",
     description:
-      "A curated development track that combines coaching, peer exchange, and business simulations to accelerate impact at senior leadership levels.",
+      "A curated executive track that blends coaching, peer exchange, and business simulations to accelerate enterprise impact. Senior leaders refine their leadership narrative, strengthen succession capabilities, and align strategic direction with culture, talent, and operational outcomes.",
   },
 ];
 
 const LEARNING_LEADERSHIP_COMMUNITY_CARDS = [
   {
-    image: LEARNING_CARD_IMAGE,
+    image: PEOPLE_FOLDER_IMAGES[6],
     imageAlt: "Cross-functional colleagues collaborating in a community workshop.",
     title: "Peer Learning Circle",
     description:
-      "A community-led format where colleagues exchange practical insights, solve real workplace challenges, and grow through shared experience.",
+      "A community-led format where colleagues exchange practical insights, discuss real workplace challenges, and learn from each other's experiences. These circles build stronger collaboration across functions and create a safe environment for experimentation, reflection, and continuous improvement.",
   },
   {
-    image: LEARNING_CARD_IMAGE,
+    image: PEOPLE_FOLDER_IMAGES[7],
     imageAlt: "Employees participating in a learning and leadership roundtable.",
     title: "Mentor Connect Program",
     description:
-      "A structured mentor-mentee journey that strengthens leadership capability through guided reflection, support, and goal-oriented development.",
+      "A structured mentor-mentee journey that supports career progression through guided reflection, goal setting, and practical support. Participants gain broader perspective, improve decision quality, and build the confidence needed to take on greater responsibility across the organization.",
   },
   {
-    image: LEARNING_CARD_IMAGE,
+    image: PEOPLE_FOLDER_IMAGES[8],
     imageAlt: "Community members joining an interactive leadership session.",
     title: "Leadership Exchange Forum",
     description:
-      "A recurring forum where teams explore leadership trends, celebrate best practices, and co-create ideas that shape a stronger learning culture.",
+      "A recurring forum where leaders explore market trends, share proven practices, and co-create ideas that strengthen our learning culture. The exchange helps teams scale what works, respond faster to change, and keep leadership conversations connected to business priorities.",
   },
 ];
 
