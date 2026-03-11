@@ -161,7 +161,7 @@ export default function Footer() {
       </div>
 
       <div className="bg-[var(--background)]">
-        <div className="mx-auto max-w-[1400px] px-6 py-6 text-center text-xs text-[var(--gray-dark)] sm:px-10 sm:text-sm lg:px-16 lg:text-left">
+        <div className="mx-auto max-w-full px-6 py-6 text-center text-xs text-[var(--gray-dark)] sm:px-10 sm:text-sm lg:px-16 lg:text-left">
           <p>&copy; {currentYear} Majid Al Futtaim. All rights reserved.</p>
         </div>
       </div>

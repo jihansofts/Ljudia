@@ -202,7 +202,7 @@ export default function LeadershipInstitutePage() {
       />
 
       <section id="key-facts" ref={keyFactsRef} className="bg-[#e8e8e8]">
-        <div className="mx-auto flex min-h-[30rem] max-w-[1400px] flex-col justify-between px-6 py-16 sm:min-h-[34rem] sm:px-10 sm:py-20 lg:min-h-[38rem] lg:px-16 lg:py-24">
+        <div className="mx-auto flex min-h-[30rem] max-w-full flex-col justify-between px-6 py-16 sm:min-h-[34rem] sm:px-10 sm:py-20 lg:min-h-[38rem] lg:px-16 lg:py-24">
           <h2 className="max-w-md text-4xl font-bold leading-[1.08] text-black sm:text-5xl lg:text-6xl">
             Key Facts
             <br />
@@ -225,7 +225,7 @@ export default function LeadershipInstitutePage() {
       </section>
 
       <section id="learning" className="bg-white">
-        <div className="mx-auto max-w-[1400px] px-6 py-12 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+        <div className="mx-auto max-w-full px-6 py-12 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
           <h2 className="text-3xl font-bold leading-[1.05] tracking-tight text-black sm:text-5xl lg:text-7xl">
             LEARNING
           </h2>
@@ -245,7 +245,7 @@ export default function LeadershipInstitutePage() {
       </section>
 
       <section id="leadership-development" className="bg-[#f6f6f6]">
-        <div className="mx-auto max-w-[1400px] px-6 py-12 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+        <div className="mx-auto max-w-full px-6 py-12 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
           <h2 className="text-3xl font-bold leading-[1.05] tracking-tight text-black sm:text-5xl lg:text-7xl">
             LEADERSHIP DEVELOPMENT
           </h2>
@@ -265,7 +265,7 @@ export default function LeadershipInstitutePage() {
       </section>
 
       <section id="learning-leadership-community" className="bg-white">
-        <div className="mx-auto max-w-[1400px] px-6 py-12 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+        <div className="mx-auto max-w-full px-6 py-12 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
           <h2 className="max-w-5xl text-balance text-3xl font-bold leading-[1.05] tracking-tight text-black sm:text-5xl lg:text-7xl">
             LEARNING &amp; LEADERSHIP COMMUNITY
           </h2>

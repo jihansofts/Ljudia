@@ -16,6 +16,7 @@ export default function App({ Component, pageProps }) {
   const noTopOffsetRoutes = new Set([
     "/",
     "/who-we-are",
+    "/people-careers",
     "/leadership-institute",
   ]);
   const needsTopOffset = !noTopOffsetRoutes.has(router.pathname);

@@ -28,7 +28,7 @@ export default function WhoWeArePage() {
         <div className="absolute inset-0 bg-black/35" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,24,39,0.86)_0%,rgba(17,24,39,0.72)_36%,rgba(17,24,39,0.18)_100%)]" />
 
-        <div className="relative z-10 mx-auto flex min-h-[44rem] max-w-[1400px] items-center px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+        <div className="relative z-10 mx-auto flex min-h-[44rem] max-w-full items-center px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
           <div className="max-w-4xl text-white">
             <h1 className="text-5xl font-bold leading-none tracking-tight sm:text-6xl lg:text-7xl">
               Vision Driven
@@ -55,8 +55,8 @@ export default function WhoWeArePage() {
         title="Vision & Values"
         description={
           <>
-            Across our operations, we create innovative brands, destinations
-            and spaces that burst with ingenuity.
+            Across our operations, we create innovative brands, destinations and
+            spaces that burst with ingenuity.
             <br />
             <br />
             We strive to incubate happiness by creating great moments for
@@ -86,7 +86,7 @@ export default function WhoWeArePage() {
         imageOnRight
       />
 
-      <section id="sustainability-esg" className="bg-white">
+      <section id="sustainability-esg" className="bg-white mb-20">
         <div className="flex flex-col lg:flex-row">
           {sustainabilityCards.map((card) => (
             <article

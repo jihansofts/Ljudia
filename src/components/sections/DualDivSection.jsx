@@ -15,7 +15,7 @@ export default function DualDivSection({
     <section id={id} className="scroll-mt-28 bg-white">
       <div
         className={[
-          "mx-auto flex max-w-[1400px] flex-col gap-10 px-6 py-12 sm:px-10 sm:py-14 lg:items-center lg:gap-14 lg:px-16 lg:py-20",
+          "mx-auto flex max-w-full flex-col gap-10 px-6 py-12 sm:px-10 sm:py-14 lg:items-center lg:gap-14 lg:px-16 lg:py-20",
           imageOnRight ? "lg:flex-row-reverse" : "lg:flex-row",
         ].join(" ")}
       >

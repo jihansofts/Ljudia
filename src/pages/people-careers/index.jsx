@@ -33,7 +33,7 @@ export default function PeopleCareersPage() {
     <>
       <section className="relative isolate min-h-[38rem] overflow-hidden bg-stone-950 sm:min-h-[44rem]">
         <Image
-          src="/images/homepage_peoples_and_careers.avif"
+          src="/images/buildyourself.avif"
           alt="People and Careers at Majid Al Futtaim"
           fill
           priority
@@ -43,7 +43,7 @@ export default function PeopleCareersPage() {
         <div className="absolute inset-0 bg-black/35" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,24,39,0.86)_0%,rgba(17,24,39,0.72)_38%,rgba(17,24,39,0.2)_100%)]" />
 
-        <div className="relative z-10 mx-auto flex min-h-[38rem] max-w-[1400px] items-end px-6 py-14 sm:min-h-[44rem] sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+        <div className="relative z-10 mx-auto flex min-h-[38rem] max-w-full items-end px-6 py-14 sm:min-h-[44rem] sm:px-10 sm:py-20 lg:px-16 lg:py-24">
           <div className="max-w-3xl text-white">
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-stone-100 sm:text-base">
               People &amp; Careers
@@ -83,7 +83,7 @@ export default function PeopleCareersPage() {
       />
 
       <section id="career-pathways" className="bg-[#f6f6f6]">
-        <div className="mx-auto max-w-[1400px] px-6 py-12 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+        <div className="mx-auto max-w-full px-6 py-12 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
           <h2 className="text-3xl font-bold leading-[1.05] tracking-tight text-black sm:text-5xl lg:text-7xl">
             CAREER PATHWAYS
           </h2>

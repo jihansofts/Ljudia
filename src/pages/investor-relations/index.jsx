@@ -12,7 +12,7 @@ const TERMS_PARAGRAPHS = [
 export default function InvestorRelationsPage() {
   return (
     <section id="investor-relations-terms" className="bg-[#e8e8e8]">
-      <div className="mx-auto max-w-[1400px] px-6 py-12 sm:px-10 sm:py-14 lg:px-16 lg:py-16">
+      <div className="mx-auto max-w-full px-6 py-12 sm:px-10 sm:py-14 lg:px-16 lg:py-16">
         <nav
           aria-label="Breadcrumb"
           className="text-xs uppercase tracking-[0.08em] sm:text-sm"
