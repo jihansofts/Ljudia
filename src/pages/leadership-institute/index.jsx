@@ -32,7 +32,8 @@ const PEOPLE_FOLDER_IMAGES = [
 const LEARNING_CARDS = [
   {
     image: PEOPLE_FOLDER_IMAGES[0],
-    imageAlt: "Leadership workshop environment designed for collaborative learning.",
+    imageAlt:
+      "Leadership workshop environment designed for collaborative learning.",
     title: "Induction Academy",
     description:
       "A structured onboarding journey that helps new colleagues understand our culture, values, and operating model through practical learning experiences. Participants build confidence in role expectations, connect with key teams, and gain early exposure to the tools and behaviors that support long-term success.",
@@ -47,7 +48,8 @@ const LEARNING_CARDS = [
   },
   {
     image: PEOPLE_FOLDER_IMAGES[2],
-    imageAlt: "Modern learning space prepared for immersive training activities.",
+    imageAlt:
+      "Modern learning space prepared for immersive training activities.",
     title: "Digital Learning Hub",
     description:
       "An always-on learning ecosystem with curated pathways, self-paced modules, and collaborative practice communities. Colleagues can upskill in the flow of work, track development goals, and access role-based content that supports immediate performance as well as future career progression.",
@@ -82,14 +84,16 @@ const LEADERSHIP_DEVELOPMENT_CARDS = [
 const LEARNING_LEADERSHIP_COMMUNITY_CARDS = [
   {
     image: PEOPLE_FOLDER_IMAGES[6],
-    imageAlt: "Cross-functional colleagues collaborating in a community workshop.",
+    imageAlt:
+      "Cross-functional colleagues collaborating in a community workshop.",
     title: "Peer Learning Circle",
     description:
       "A community-led format where colleagues exchange practical insights, discuss real workplace challenges, and learn from each other's experiences. These circles build stronger collaboration across functions and create a safe environment for experimentation, reflection, and continuous improvement.",
   },
   {
     image: PEOPLE_FOLDER_IMAGES[7],
-    imageAlt: "Employees participating in a learning and leadership roundtable.",
+    imageAlt:
+      "Employees participating in a learning and leadership roundtable.",
     title: "Mentor Connect Program",
     description:
       "A structured mentor-mentee journey that supports career progression through guided reflection, goal setting, and practical support. Participants gain broader perspective, improve decision quality, and build the confidence needed to take on greater responsibility across the organization.",
@@ -180,16 +184,16 @@ export default function LeadershipInstitutePage() {
         title="Mission & Overview"
         description={
           <>
-            Learning at Majid Al Futtaim is guided by our three core
-            principles: &apos;Grow by Giving,&apos; &apos;Own Your
-            Learning,&apos; and &apos;Everyone to Everyone Learning.&apos;
+            Learning at Majid Al Futtaim is guided by our three core principles:
+            &apos;Grow by Giving,&apos; &apos;Own Your Learning,&apos; and
+            &apos;Everyone to Everyone Learning.&apos;
             <br />
             <br />
             We believe that learning is not only a personal journey but a
             collective endeavour, where knowledge flows freely across all
             levels, roles, and teams. Our leaders are committed to lifting
-            others as they grow, fostering an environment where sharing
-            insights and experiences is a natural part of daily interactions.
+            others as they grow, fostering an environment where sharing insights
+            and experiences is a natural part of daily interactions.
             <br />
             <br />
             Every team member is encouraged to take ownership of their
@@ -206,10 +210,10 @@ export default function LeadershipInstitutePage() {
           <h2 className="max-w-md text-4xl font-bold leading-[1.08] text-black sm:text-5xl lg:text-6xl">
             Key Facts
             <br />
-            (2024)
+            (2024 - 2026)
           </h2>
 
-          <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-10 lg:mt-20 lg:grid-cols-4 lg:gap-8">
+          <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-10 lg:mt-5 lg:grid-cols-4 lg:gap-8">
             {KEY_FACTS.map((fact, index) => (
               <article key={fact.label} className="text-center lg:self-end">
                 <p className="text-4xl font-semibold tracking-tight text-[#a98b58] sm:text-5xl lg:text-6xl">
