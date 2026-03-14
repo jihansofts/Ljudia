@@ -84,7 +84,7 @@ export default function WhatweDo() {
   };
 
   return (
-    <section className="relative isolate mb-8 h-[100svh] min-h-[40rem] overflow-hidden bg-stone-950 sm:mb-10 lg:mb-12">
+    <section className="relative isolate h-svh min-h-160 overflow-hidden bg-stone-950">
       {SLIDES.map((slide, index) => {
         const isActive = index === activeSlideIndex;
 

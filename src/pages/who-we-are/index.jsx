@@ -86,7 +86,7 @@ export default function WhoWeArePage() {
         imageOnRight
       />
 
-      <section id="sustainability-esg" className="bg-white mb-20">
+      <section id="sustainability-esg" className="bg-white">
         <div className="flex flex-col lg:flex-row">
           {sustainabilityCards.map((card) => (
             <article

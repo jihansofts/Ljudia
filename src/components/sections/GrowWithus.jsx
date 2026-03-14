@@ -6,7 +6,7 @@ export default function GrowWithus() {
   return (
     <section
       id="leadership-institute"
-      className="relative isolate min-h-[42rem] scroll-mt-28 overflow-hidden bg-stone-950"
+      className="relative isolate min-h-[42rem]overflow-hidden bg-stone-950"
     >
       <Image
         src="/images/leadership-institute-spotlight.jpeg"

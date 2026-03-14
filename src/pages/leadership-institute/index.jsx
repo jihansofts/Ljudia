@@ -288,7 +288,7 @@ export default function LeadershipInstitutePage() {
         </div>
       </section>
 
-      <section id="about-image" className="my-10 sm:my-12 lg:my-16">
+      <section id="about-image">
         <div className="relative h-[45vh] min-h-[22rem] w-full sm:h-[55vh] lg:h-[68vh]">
           <Image
             src={ABOUT_SECTION_IMAGE}
