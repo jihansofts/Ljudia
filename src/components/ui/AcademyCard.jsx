@@ -11,7 +11,7 @@ export default function AcademyCard({
   return (
     <article
       className={[
-        "mx-auto w-full max-w-[23rem] space-y-4 text-[var(--gray-dark)] sm:space-y-6",
+        "mx-auto w-full max-w-[40rem] space-y-4 text-[var(--gray-dark)] sm:space-y-6",
         className,
       ].join(" ")}
     >

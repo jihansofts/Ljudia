@@ -50,7 +50,7 @@ export default function InvestorRelationsPage() {
 
           <button
             type="button"
-            className="mt-10 w-full rounded-tr-[2rem] rounded-bl-[2rem] bg-[#970f3f] px-6 py-4 text-center text-base font-semibold leading-tight tracking-[0.02em] text-white transition-colors hover:bg-[#7e0d35] sm:w-auto sm:px-10 sm:py-5 sm:text-lg"
+            className="mt-8 rounded-tr-2xl rounded-bl-2xl bg-(--navbar-surface) px-6 py-3 text-sm font-semibold leading-tight tracking-[0.02em] text-white transition-colors hover:bg-[#7e0d35] sm:px-8 sm:py-4 sm:text-base"
           >
             I Agree To Access The Terms & Condition Section
           </button>

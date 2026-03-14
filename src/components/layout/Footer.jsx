@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CiFacebook } from "react-icons/ci";
 import { RiLinkedinLine } from "react-icons/ri";
+import { MdOutlineMail } from "react-icons/md";
 
 const FOOTER_NAV_ITEMS = [
   { label: "Home", href: "/" },
@@ -17,6 +18,11 @@ const SOCIAL_LINKS = [
     label: "LinkedIn",
     href: "#",
     icon: <RiLinkedinLine className="text-lg" />,
+  },
+  {
+    label: "Gmail",
+    href: "mailto:hello@ljudia.com",
+    icon: <MdOutlineMail className="text-lg" />,
   },
 ];
 
@@ -45,7 +51,7 @@ export default function Footer() {
                     <Link
                       href={item.href}
                       aria-label={item.label}
-                      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-white transition-colors hover:border-(--navbar-accent-strong) hover:text-(--navbar-accent-strong)"
+                      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-(--navbar-accent) transition-colors hover:border-(--navbar-accent-strong) hover:text-(--navbar-accent-strong)"
                     >
                       {item.icon}
                     </Link>

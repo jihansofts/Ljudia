@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const VIDEOS = [
   {
@@ -19,7 +20,6 @@ export default function HomeSection() {
     VIDEOS.findIndex((video) => video.id === activeVideoId),
     0,
   );
-  const nextVideo = VIDEOS[(activeVideoIndex + 1) % VIDEOS.length];
   const showNextVideo = () => {
     setActiveVideoId((currentVideoId) => {
       const currentVideoIndex = Math.max(
@@ -76,20 +76,33 @@ export default function HomeSection() {
       <div className="absolute inset-0 bg-black/45" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(251,191,36,0.28),transparent_32%),linear-gradient(180deg,rgba(0,0,0,0.18)_0%,rgba(0,0,0,0.58)_100%)]" />
 
-      <div className="relative flex min-h-screen items-end px-6 py-10 sm:px-10 sm:py-14 lg:px-16 lg:py-16">
-        <div className="max-w-2xl space-y-6 text-white">
-          <p className="text-balance text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
-            Unleash Your Potential with Ljudia Hire
+      <div className="relative flex min-h-screen items-center justify-center px-6 py-10 sm:px-10 sm:py-14 lg:px-16 lg:py-16">
+        <div className="mx-auto flex max-w-2xl flex-col items-center space-y-6 text-center text-white">
+          <h1 className="text-balance text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+            Simplify the process of hiring a global workforce.
+          </h1>
+
+          <p className="mx-auto max-w-xl text-base leading-relaxed text-white/90 sm:text-lg">
+            Whether you’re a small business or a multinational corporation,
+            Ljudia Hire is here to help you find the skilled workforce you need
+            to grow.
           </p>
 
-          <button
-            type="button"
-            onClick={showNextVideo}
-            aria-label={`Switch to ${nextVideo.title}`}
-            className="rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-stone-950 transition-colors hover:bg-amber-300"
-          >
-            Start your journy
-          </button>
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
+            <a
+              href="mailto:hello@ljudia.com"
+              className="inline-flex h-12 w-52 items-center justify-center rounded-full border border-transparent bg-(--navbar-surface) px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            >
+              Contact us
+            </a>
+
+            <Link
+              href="/people-careers"
+              className="inline-flex h-12 w-52 items-center justify-center rounded-full border border-white/80 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-(--navbar-accent) hover:text-(--navbar-accent)"
+            >
+              Explore Services
+            </Link>
+          </div>
         </div>
       </div>
     </section>
