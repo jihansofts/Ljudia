@@ -33,7 +33,7 @@ export const PEOPLE_AND_CAREERS_CONTENT = {
 export const INVESTOR_RELATIONS_CONTENT = {
   id: "investor-relations",
   image: "/images/homepage_investor_relations.avif",
-  smallTitle: "INVESTOR RELATIONS",
+  smallTitle: "TERMS & CONDITION",
   title: (
     <>
       Let&apos;s Build <br />

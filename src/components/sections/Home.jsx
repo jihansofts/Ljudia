@@ -79,7 +79,7 @@ export default function HomeSection() {
       <div className="relative flex min-h-screen items-end px-6 py-10 sm:px-10 sm:py-14 lg:px-16 lg:py-16">
         <div className="max-w-2xl space-y-6 text-white">
           <p className="text-balance text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
-            Switch between the two videos in the homepage player.
+            Unleash Your Potential with Ljudia Hire
           </p>
 
           <button

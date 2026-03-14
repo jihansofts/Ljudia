@@ -1,168 +1,78 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CiFacebook } from "react-icons/ci";
-import { FaInstagram } from "react-icons/fa6";
-import { BsTiktok } from "react-icons/bs";
-import { SlSocialYoutube } from "react-icons/sl";
-import { FaXTwitter } from "react-icons/fa6";
 import { RiLinkedinLine } from "react-icons/ri";
-import { AiOutlineMedium } from "react-icons/ai";
 
-const FOOTER_COLUMNS = [
-  {
-    title: "WHO WE ARE",
-    links: [
-      "Vision & Values",
-      "Our Journey",
-      "Sustainability & ESG",
-      "Corporate Compliance",
-    ],
-  },
-  {
-    title: "WHAT WE DO",
-    links: [
-      "Unique Experiences",
-      "Our Industries",
-      "Our Brand Family",
-      "Partner With Us",
-    ],
-  },
-  {
-    title: "THE LEADERSHIP INSTITUTE",
-    links: [
-      "Executive Learning",
-      "Leadership Programmes",
-      "Capability Building",
-    ],
-  },
-  {
-    title: "QUICK LINKS",
-    links: [
-      "Contact Us",
-      "Media Centre",
-      "People & Careers",
-      "Investor Relations",
-      "Privacy Center",
-      "Anti Fraud Disclaimer",
-      "Responsible Disclosure Policy",
-    ],
-  },
+const FOOTER_NAV_ITEMS = [
+  { label: "Home", href: "/" },
+  { label: "WHO WE ARE", href: "/who-we-are" },
+  { label: "PEOPLE & CAREERS", href: "/people-careers" },
+  { label: "The Leadership Institute", href: "/leadership-institute" },
+  { label: "TERMS & CONDITION", href: "/investor-relations" },
 ];
 
 const SOCIAL_LINKS = [
-  {
-    label: "Facebook",
-    href: "#",
-    icon: <CiFacebook />,
-  },
-  {
-    label: "Instagram",
-    href: "#",
-    icon: <FaInstagram />,
-  },
-  {
-    label: "TikTok",
-    href: "#",
-    icon: <BsTiktok />,
-  },
-  {
-    label: "YouTube",
-    href: "#",
-    icon: <SlSocialYoutube />,
-  },
-  {
-    label: "X",
-    href: "#",
-    icon: <FaXTwitter />,
-  },
+  { label: "Facebook", href: "#", icon: <CiFacebook className="text-lg" /> },
   {
     label: "LinkedIn",
     href: "#",
-    icon: <RiLinkedinLine />,
-  },
-  {
-    label: "Medium",
-    href: "#",
-    icon: <AiOutlineMedium />,
+    icon: <RiLinkedinLine className="text-lg" />,
   },
 ];
-
-function SocialLink({ href, label, icon }) {
-  return (
-    <Link
-      href={href}
-      aria-label={label}
-      className="flex h-12 w-12 items-center justify-center rounded-full border border-white text-white transition-colors hover:bg-[var(--navbar-accent)] hover:text-[var(--navbar-surface)]"
-    >
-      {icon}
-    </Link>
-  );
-}
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mt-0">
-      <div className="bg-[var(--navbar-surface)] text-white">
-        <div className="mx-auto max-w-full px-6 py-12 sm:px-10 sm:py-14 lg:px-16 lg:py-16">
-          <div className="grid gap-10 border-b border-white/10 pb-10 sm:pb-12 md:grid-cols-2 md:gap-12 xl:grid-cols-[minmax(0,1.3fr)_repeat(4,minmax(0,1fr))] xl:gap-8">
-            <div className="space-y-8 md:col-span-2 xl:col-span-1">
-              <Link
-                href="/"
-                aria-label="Majid Al Futtaim home"
-                className="inline-flex"
-              >
-                <Image
-                  src="/images/Logo-light.png"
-                  alt="Majid Al Futtaim"
-                  width={311}
-                  height={74}
-                  className="h-14 w-auto object-contain sm:h-16"
-                  priority={false}
-                />
-              </Link>
+    <footer className="bg-(--navbar-surface) text-white">
+      <div className="border-b border-white/10 px-5 py-10">
+        <div className="mx-auto flex w-full max-w-350 flex-col gap-8 md:flex-row md:items-start md:justify-between">
+          <div className="flex flex-col gap-4">
+            <Link href="/" aria-label="Ljudia home" className="inline-flex">
+              <Image
+                src="/images/Logo-light.png"
+                alt="Ljudia"
+                width={1500}
+                height={1394}
+                className="h-10 w-auto object-contain sm:h-12"
+              />
+            </Link>
 
-              <div className="space-y-5">
-                <p className="text-lg font-light tracking-[0.01em] text-white sm:text-xl">
-                  Stay in touch with us
-                </p>
-
-                <div className="flex max-w-sm flex-wrap gap-3 sm:gap-4">
-                  {SOCIAL_LINKS.map((link) => (
-                    <SocialLink key={link.label} {...link} />
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {FOOTER_COLUMNS.map((column) => (
-              <div key={column.title} className="space-y-4">
-                <h2 className="max-w-[14rem] text-base font-semibold uppercase leading-tight tracking-[0.08em] text-white sm:text-lg">
-                  {column.title}
-                </h2>
-
-                <ul className="space-y-3 text-[11px] uppercase tracking-[0.08em] text-white sm:text-xs">
-                  {column.links.map((link) => (
-                    <li key={link}>
-                      <Link
-                        href="#"
-                        className="transition-colors hover:text-[var(--navbar-accent)]"
-                      >
-                        {link}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            <ul className="flex items-center gap-3">
+              {SOCIAL_LINKS.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    aria-label={item.label}
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-white transition-colors hover:border-(--navbar-accent-strong) hover:text-(--navbar-accent-strong)"
+                  >
+                    {item.icon}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
+
+          <nav aria-label="Footer navigation" className="w-full md:max-w-190">
+            <ul className="grid list-disc grid-cols-1 gap-x-10 gap-y-3 pl-4 text-[11px] font-semibold uppercase tracking-[0.16em] marker:text-white/60 sm:grid-cols-2 lg:grid-cols-3">
+              {FOOTER_NAV_ITEMS.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="border-b-2 border-transparent pb-1 transition-colors hover:border-(--navbar-accent-strong) hover:text-white"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </div>
 
-      <div className="bg-[var(--background)]">
-        <div className="mx-auto max-w-full px-6 py-6 text-center text-xs text-[var(--gray-dark)] sm:px-10 sm:text-sm lg:px-16 lg:text-left">
-          <p>&copy; {currentYear} Majid Al Futtaim. All rights reserved.</p>
+      <div className="px-5 py-5 text-[11px] uppercase tracking-[0.12em] text-white/80">
+        <div className="mx-auto w-full max-w-350">
+          <p>&copy; Ljudia Hire {currentYear}. All rights reserved.</p>
         </div>
       </div>
     </footer>

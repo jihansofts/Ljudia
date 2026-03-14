@@ -29,7 +29,7 @@ export default function InvestorRelationsPage() {
                 href="/investor-relations"
                 className="transition-colors hover:text-black"
               >
-                Investor Relations
+                Terms & Condition
               </Link>
             </li>
             <li aria-hidden="true">|</li>
@@ -52,7 +52,7 @@ export default function InvestorRelationsPage() {
             type="button"
             className="mt-10 w-full rounded-tr-[2rem] rounded-bl-[2rem] bg-[#970f3f] px-6 py-4 text-center text-base font-semibold leading-tight tracking-[0.02em] text-white transition-colors hover:bg-[#7e0d35] sm:w-auto sm:px-10 sm:py-5 sm:text-lg"
           >
-            I Agree To Access The Investor Relations Section
+            I Agree To Access The Terms & Condition Section
           </button>
         </div>
       </div>
