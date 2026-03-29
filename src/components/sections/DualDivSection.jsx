@@ -9,6 +9,7 @@ export default function DualDivSection({
   title,
   description,
   buttonName,
+  buttonHref,
   imageOnRight = false,
 }) {
   return (
@@ -44,7 +45,10 @@ export default function DualDivSection({
           </p>
 
           {buttonName ? (
-            <RoundedTwoCornerButton className="mt-7 px-6 py-4 sm:px-7 sm:py-5">
+            <RoundedTwoCornerButton
+              href={buttonHref}
+              className="mt-7 px-6 py-4 sm:px-7 sm:py-5"
+            >
               {buttonName}
             </RoundedTwoCornerButton>
           ) : null}

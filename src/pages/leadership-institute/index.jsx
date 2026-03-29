@@ -3,7 +3,6 @@ import DualDivSection from "@/components/sections/DualDivSection";
 import AcademyCard from "@/components/ui/AcademyCard";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/router";
 
 const KEY_FACTS = [
   { target: 3103, label: "learners", suffix: "", decimals: 0 },
@@ -123,7 +122,6 @@ function formatCounter(value, fact) {
 }
 
 export default function LeadershipInstitutePage() {
-  const router = useRouter();
   const keyFactsRef = useRef(null);
   const [animateCounters, setAnimateCounters] = useState(false);
   const [counterValues, setCounterValues] = useState(() =>
@@ -174,23 +172,8 @@ export default function LeadershipInstitutePage() {
     return () => cancelAnimationFrame(frameId);
   }, [animateCounters]);
 
-  const handleContactCtaClick = (event) => {
-    const interactiveElement = event.target.closest("a,button");
-    const label = interactiveElement?.textContent
-      ?.replace(/\s+/g, " ")
-      .trim()
-      .toLowerCase();
-
-    if (!label || !(label.startsWith("explore") || label === "learn more")) {
-      return;
-    }
-
-    event.preventDefault();
-    router.push("/contact-us");
-  };
-
   return (
-    <div onClick={handleContactCtaClick}>
+    <>
       <GrowWithus />
 
       <DualDivSection
@@ -316,6 +299,6 @@ export default function LeadershipInstitutePage() {
           />
         </div>
       </section>
-    </div>
+    </>
   );
 }

@@ -37,7 +37,10 @@ export default function GrowWithus() {
               growth.
             </p>
 
-            <RoundedTwoCornerButton className="px-7 py-4">
+            <RoundedTwoCornerButton
+              href="/contact-us"
+              className="px-7 py-4"
+            >
               Explore More
             </RoundedTwoCornerButton>
           </div>

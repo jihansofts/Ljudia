@@ -97,7 +97,7 @@ export default function HomeSection() {
             </Link>
 
             <Link
-              href="/people-careers"
+              href="/contact-us"
               className="inline-flex h-12 w-52 items-center justify-center rounded-full border border-white/80 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-(--navbar-accent) hover:text-(--navbar-accent)"
             >
               Explore Services

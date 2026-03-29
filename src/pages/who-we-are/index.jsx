@@ -1,10 +1,8 @@
 import Image from "next/image";
-import { useRouter } from "next/router";
 import DualDivSection from "@/components/sections/DualDivSection";
 import RoundedTwoCornerButton from "@/components/ui/RoundedTwoCornerButton";
 
 export default function WhoWeArePage() {
-  const router = useRouter();
   const sustainabilityCards = [
     {
       src: "/images/creating-impact-spotlight-1.avif",
@@ -16,23 +14,8 @@ export default function WhoWeArePage() {
     },
   ];
 
-  const handleContactCtaClick = (event) => {
-    const interactiveElement = event.target.closest("a,button");
-    const label = interactiveElement?.textContent
-      ?.replace(/\s+/g, " ")
-      .trim()
-      .toLowerCase();
-
-    if (!label || !(label.startsWith("explore") || label === "learn more")) {
-      return;
-    }
-
-    event.preventDefault();
-    router.push("/contact-us");
-  };
-
   return (
-    <div onClick={handleContactCtaClick}>
+    <>
       <section className="relative isolate min-h-[44rem] overflow-hidden bg-stone-950">
         <Image
           src="/images/who_we_are_spolight_thumbnail.avif"
@@ -82,6 +65,7 @@ export default function WhoWeArePage() {
           </>
         }
         buttonName="Explore More"
+        buttonHref="/contact-us"
       />
 
       <DualDivSection
@@ -100,6 +84,7 @@ export default function WhoWeArePage() {
           </>
         }
         buttonName="Explore The Journey"
+        buttonHref="/contact-us"
         imageOnRight
       />
 
@@ -125,7 +110,10 @@ export default function WhoWeArePage() {
                   <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
                     Sustainability &amp; ESG
                   </h1>
-                  <RoundedTwoCornerButton className="px-7 py-4">
+                  <RoundedTwoCornerButton
+                    href="/contact-us"
+                    className="px-7 py-4"
+                  >
                     Learn More
                   </RoundedTwoCornerButton>
                 </div>
@@ -134,6 +122,6 @@ export default function WhoWeArePage() {
           ))}
         </div>
       </section>
-    </div>
+    </>
   );
 }
