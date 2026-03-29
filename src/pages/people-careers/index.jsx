@@ -21,7 +21,8 @@ const CAREER_CARDS = [
   },
   {
     image: "/images/office-images/office-4.jpg",
-    imageAlt: "Modern collaborative office space representing future-focused careers.",
+    imageAlt:
+      "Modern collaborative office space representing future-focused careers.",
     title: "Future Skills",
     description:
       "A forward-looking development journey focused on digital fluency, innovation, and adaptability for future-ready teams. Through practical learning, collaborative problem-solving, and emerging capability programs, colleagues are equipped to create measurable business impact and lead confidently in evolving markets.",
@@ -58,7 +59,7 @@ export default function PeopleCareersPage() {
             </p>
             <RoundedTwoCornerButton
               href="/contact-us"
-              className="mt-8 w-full max-w-xs px-6 py-4 sm:w-auto sm:px-7"
+              className="mt-8 sm:mt-10"
             >
               Explore Opportunities
             </RoundedTwoCornerButton>
