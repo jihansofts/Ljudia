@@ -18,9 +18,11 @@ const NAV_ITEMS = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const desktopNavItems = isScrolled
-    ? [...NAV_ITEMS, { label: "SEARCH", href: "#" }]
-    : NAV_ITEMS;
+  const desktopNavItems = [
+    ...NAV_ITEMS,
+    { label: "Contact Us", href: "#" },
+    { label: "SEARCH", href: "#" },
+  ];
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 40);
@@ -55,29 +57,6 @@ export default function Navbar() {
             : "bg-[var(--navbar-overlay)]",
         ].join(" ")}
       >
-        {/* Top header bar*/}
-        <div
-          className={[
-            "hidden overflow-hidden bg-[var(--navbar-surface)] transition-all duration-200 md:block",
-            isScrolled ? "max-h-0 opacity-0" : "max-h-[38px] opacity-100",
-          ].join(" ")}
-        >
-          <div className="flex h-[38px] items-center justify-end   px-5 text-center">
-            <ul className="flex items-center justify-center gap-7 text-[11px]">
-              <li>
-                <Link
-                  href="#"
-                  className="tracking-[0.18em] text-white transition-colors hover:text-white"
-                >
-                  Contact Us
-                </Link>
-              </li>
-              <BsSearch />
-            </ul>
-          </div>
-        </div>
-
-        {/* Main nav row */}
         <div className="grid h-[90px] grid-cols-[auto_auto] items-center justify-between gap-6 px-5 lg:grid-cols-[auto_minmax(0,1fr)] lg:gap-12">
           {/* Left: logo/brand */}
           <div className="flex items-center">
