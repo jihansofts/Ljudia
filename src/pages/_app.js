@@ -18,6 +18,7 @@ export default function App({ Component, pageProps }) {
     "/who-we-are",
     "/people-careers",
     "/leadership-institute",
+    "/contact-us",
   ]);
   const needsTopOffset = !noTopOffsetRoutes.has(router.pathname);
 

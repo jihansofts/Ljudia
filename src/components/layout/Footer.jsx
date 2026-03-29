@@ -9,6 +9,7 @@ const FOOTER_NAV_ITEMS = [
   { label: "WHO WE ARE", href: "/who-we-are" },
   { label: "PEOPLE & CAREERS", href: "/people-careers" },
   { label: "The Leadership Institute", href: "/leadership-institute" },
+  { label: "CONTACT US", href: "/contact-us" },
   { label: "TERMS & CONDITION", href: "/investor-relations" },
 ];
 

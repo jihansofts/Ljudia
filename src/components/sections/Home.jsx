@@ -89,12 +89,12 @@ export default function HomeSection() {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
-            <a
-              href="mailto:hello@ljudia.com"
+            <Link
+              href="/contact-us"
               className="inline-flex h-12 w-52 items-center justify-center rounded-full border border-transparent bg-(--navbar-surface) px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
             >
               Contact us
-            </a>
+            </Link>
 
             <Link
               href="/people-careers"

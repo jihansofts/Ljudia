@@ -19,7 +19,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const desktopNavItems = [
     ...NAV_ITEMS,
-    { label: "Contact Us", href: "#" },
+    { label: "Contact Us", href: "/contact-us" },
   ];
 
   useEffect(() => {
@@ -124,7 +124,7 @@ export default function Navbar() {
               ))}
               <li>
                 <Link
-                  href="#"
+                  href="/contact-us"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="flex min-h-11 items-center py-3 text-white transition-colors hover:text-[var(--navbar-accent)]"
                 >
