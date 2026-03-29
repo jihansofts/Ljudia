@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { BsSearch } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const NAV_ITEMS = [
@@ -21,7 +20,6 @@ export default function Navbar() {
   const desktopNavItems = [
     ...NAV_ITEMS,
     { label: "Contact Us", href: "#" },
-    { label: "SEARCH", href: "#" },
   ];
 
   useEffect(() => {
@@ -81,7 +79,7 @@ export default function Navbar() {
                     href={item.href}
                     className="border-b-2 border-transparent pb-1 text-white transition-colors hover:border-[var(--navbar-accent-strong)] hover:text-white"
                   >
-                    {item.label === "SEARCH" ? <BsSearch /> : item.label}
+                    {item.label}
                   </Link>
                 </li>
               ))}
@@ -89,14 +87,6 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-3 lg:hidden">
-            <Link
-              href="#"
-              aria-label="Search"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/30 text-white transition-colors hover:border-white"
-            >
-              <BsSearch className="text-xl" />
-            </Link>
-
             <button
               type="button"
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
