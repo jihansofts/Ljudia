@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import AcademyCard from "@/components/ui/AcademyCard";
 import DualDivSection from "@/components/sections/DualDivSection";
@@ -29,8 +30,25 @@ const CAREER_CARDS = [
 ];
 
 export default function PeopleCareersPage() {
+  const router = useRouter();
+
+  const handleContactCtaClick = (event) => {
+    const interactiveElement = event.target.closest("a,button");
+    const label = interactiveElement?.textContent
+      ?.replace(/\s+/g, " ")
+      .trim()
+      .toLowerCase();
+
+    if (!label || !(label.startsWith("explore") || label === "learn more")) {
+      return;
+    }
+
+    event.preventDefault();
+    router.push("/contact-us");
+  };
+
   return (
-    <>
+    <div onClick={handleContactCtaClick}>
       <section className="relative isolate min-h-[38rem] overflow-hidden bg-stone-950 sm:min-h-[44rem]">
         <Image
           src="/images/buildyourself.avif"
@@ -101,6 +119,6 @@ export default function PeopleCareersPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

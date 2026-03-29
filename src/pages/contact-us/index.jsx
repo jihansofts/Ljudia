@@ -151,7 +151,7 @@ export default function ContactUsPage() {
 
             <a
               href="mailto:hello@ljudia.com"
-              className="mt-8 inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--navbar-accent)] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[var(--navbar-accent-strong)]"
+              className="mt-8 inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--navbar-surface)] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[var(--navbar-accent-strong)]"
             >
               hello@ljudia.com
             </a>
@@ -188,9 +188,9 @@ export default function ContactUsPage() {
               Different conversations need different entry points.
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-7 text-black/70 sm:text-lg sm:leading-8">
-              Pick the path that best matches what you are trying to solve.
-              Each option opens a focused conversation instead of sending you
-              into a dead-end contact flow.
+              Pick the path that best matches what you are trying to solve. Each
+              option opens a focused conversation instead of sending you into a
+              dead-end contact flow.
             </p>
           </div>
 
@@ -237,7 +237,10 @@ export default function ContactUsPage() {
                 your message leaves with the context already in place.
               </p>
 
-              <form onSubmit={handleSubmit} className="mt-8 grid gap-4 sm:grid-cols-2">
+              <form
+                onSubmit={handleSubmit}
+                className="mt-8 grid gap-4 sm:grid-cols-2"
+              >
                 <label className="flex flex-col gap-2 text-sm font-medium text-black">
                   Name
                   <input
