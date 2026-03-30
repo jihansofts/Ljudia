@@ -11,7 +11,6 @@ const NAV_ITEMS = [
     label: "The Leadership Institute",
     href: "/leadership-institute",
   },
-  { label: "TERMS & CONDITION", href: "/investor-relations" },
 ];
 
 export default function Navbar() {
