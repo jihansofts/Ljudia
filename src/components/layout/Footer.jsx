@@ -1,8 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CiFacebook } from "react-icons/ci";
-import { RiLinkedinLine } from "react-icons/ri";
-import { MdOutlineMail } from "react-icons/md";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPinterestP,
+  FaXTwitter,
+  FaYoutube,
+} from "react-icons/fa6";
 
 const FOOTER_NAV_ITEMS = [
   { label: "Home", href: "/" },
@@ -14,16 +19,35 @@ const FOOTER_NAV_ITEMS = [
 ];
 
 const SOCIAL_LINKS = [
-  { label: "Facebook", href: "#", icon: <CiFacebook className="text-lg" /> },
   {
-    label: "LinkedIn",
-    href: "#",
-    icon: <RiLinkedinLine className="text-lg" />,
+    label: "Instagram",
+    href: "https://www.instagram.com/ljudiahire/",
+    icon: <FaInstagram className="text-lg" />,
   },
   {
-    label: "Gmail",
-    href: "mailto:hello@ljudia.com",
-    icon: <MdOutlineMail className="text-lg" />,
+    label: "YouTube",
+    href: "https://www.youtube.com/@LjudiaHire",
+    icon: <FaYoutube className="text-lg" />,
+  },
+  {
+    label: "X",
+    href: "https://x.com/LjudiaHire",
+    icon: <FaXTwitter className="text-lg" />,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/ljudia-hire/",
+    icon: <FaLinkedinIn className="text-lg" />,
+  },
+  {
+    label: "Pinterest",
+    href: "https://www.pinterest.com/ljudiahire/",
+    icon: <FaPinterestP className="text-lg" />,
+  },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/LjudiaHire",
+    icon: <FaFacebookF className="text-lg" />,
   },
 ];
 
@@ -51,6 +75,8 @@ export default function Footer() {
                   <li key={item.label}>
                     <Link
                       href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       aria-label={item.label}
                       className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-(--navbar-accent) transition-colors hover:border-(--navbar-accent-strong) hover:text-(--navbar-accent-strong)"
                     >
